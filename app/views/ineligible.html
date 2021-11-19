@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        You are not eligible for this service.
+      </h1>
+
+      <p>You can only apply to this service if you can juggle 3 balls or more.</p>
+
+      <p>For more information on juggling lincences, visit the <a href="https://govuk-prototype-kit.herokuapp.com/docs/make-first-prototype/start">Juggling Lincences Help Page</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
