@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  License holder details
+{% endblock %}
+
+{% set serviceName %}
+Register a drone
+{% endset %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Drone licences</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Register a new drone</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class action="license-holder-check">
+
+      <h1 class="govuk-heading-xl">
+        Enter your details
+      </h1>
+
+      <h2 class="govuk-heading-m">What document did you use to register your license?</h2>
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set passportHtml %}
+{{ govukInput({
+  id: "passport",
+  name: "passport",
+  type: "text",
+  spellcheck: false,
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Enter your passport number"
+  }
+}) }}
+{% endset -%}
+
+{% set drivingLicenseHtml %}
+{{ govukInput({
+  id: "driving-license",
+  name: "driving-license",
+  type: "text",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Enter your driving license number"
+  }
+}) }}
+{% endset -%}
+
+
+{{ govukRadios({
+  idPrefix: "ID",
+  name: "ID",
+  hint: {
+    text: "Select one option."
+  },
+  items: [
+    {
+      value: "passport",
+      text: "Passport",
+      conditional: {
+        html: passportHtml
+      }
+    },
+    {
+      value: "driving-license",
+      text: "Driving license",
+      conditional: {
+        html: drivingLicenseHtml
+      }
+    }
+  ]
+}) }}
+
+<button class="govuk-button">
+        Continue
+      </button>
+
+
+    </div>
+  </div>
+{% endblock %}

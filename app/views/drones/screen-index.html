@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Drone lincense practice
+      </h1>
+      <p>
+        This is a mock service to practice prototyping based on a brief from a design crit session.
+      </p>
+
+      <h1 class="govuk-heading-m">
+      The task
+      </h1>
+
+      <p>You need to design an online service where a user can register a personal drone with their
+        licence (you will not be designing the licence application - assume this already exists).</p>
+
+      <p>As the legislation requires that the government records certain information,
+        we will need to capture the:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>date the application was made</li>
+          <li>licence ID number of the licence holder</li>
+          <li>licence holder’s name, date of birth and home address</li>
+          <li>address where the drone is stored</li>
+          <li>make and model of the drone</li>
+        </ul>
+
+
+      <h2 class="govuk-heading-m">Version history</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="v1/start">v1</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}
