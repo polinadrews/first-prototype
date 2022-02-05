@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  License holder details
+{% endblock %}
+
+{% set serviceName %}
+Register a drone
+{% endset %}
+
+
+
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Drone licences</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Register a new drone</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class action="license-holder-check">
+
+      <h1 class="govuk-heading-xl">
+        Enter your details
+      </h1>
+
+      <div class="govuk-form-group">
+  <label class="govuk-label" for="email">
+    Email address
+  </label>
+  <div id="email-hint" class="govuk-hint">
+    We’ll only use this to send you a receipt
+  </div>
+  <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+</div>
+
+<button class="govuk-button">
+        Continue
+      </button>
+
+
+    </div>
+  </div>
+{% endblock %}

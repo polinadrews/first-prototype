@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  License holder details
+{% endblock %}
+
+{% set serviceName %}
+Register a drone
+{% endset %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Drone licences</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Register a new drone</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class action="summary-check">
+
+        <h1 class="govuk-heading-xl">
+          Where is your drone stored?
+        </h1>
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "drone-storage",
+    name: "drone-storage",
+    fieldset: {
+    },
+    items: [
+      {
+        value: "idPlace",
+        text: "At my home address"
+      },
+      {
+        value: "otherPlace",
+        text: "elsewhere"
+      }
+    ]
+  }) }}
+
+<button class="govuk-button">
+        Continue
+      </button>
+
+    </div>
+  </div>
+{% endblock %}
