@@ -1,0 +1,128 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-890
+{% endblock %}
+
+{% set serviceName %}
+View a job applicant's right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+
+
+
+
+
+          <!-- Status card start -->
+
+          <div class="SS-status-card">
+            <div class="SS-status-card_header">
+              <h2 class="govuk-heading-s SS-white">Right to work</h2>
+            </div>
+            <div class="SS-status-card_body clearfix">
+
+              <div class="SS-onequarter">
+                <img class="SS-profile-pic" src="/../../../../public/images/olivia-lesotho copy.jpeg" />
+                  <input id="rotateImage" class="button-secondary no-print" aria-label="Rotate profile image" type="button" value="Rotate ↻"></input>
+              </div>
+
+              <div class="SS-threequarter">
+                <div class="SS-status-card__bodyPadding">
+                  <h1 class="govuk-heading-m">Olivia Lesotho</h1>
+                  <p>They can work in the UK.</p>
+
+                  <h2 class="govuk-heading-s">Details</h2>
+
+                  <p class="govuk body">They can work in any job. There is no limit on how long they can stay in the UK.</p>
+
+                  {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+                  {{ govukDetails({
+                    summaryText: "Legal basis of status",
+                    text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+                  }) }}
+
+                </div>
+              </div>
+              <!--  -->
+
+              <!--  -->
+            </div>
+          </div>
+<br>
+          <!-- Status card end -->
+
+          <!--start share status and update details  -->
+          <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+         <h2 class="govuk-heading-m">If you employ this person</h2>
+
+          <p class="govuk-body">To avoid a <a href="#">penalty</a>, you must:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>check this looks like the person you meet face to face</li>
+              <li>keep a secure copy of this online check (either electronically or in hard copy), for the duration of the
+              employment and for 2 years after</li>
+            </ul>
+
+          <p class="govuk-body">You don't have to do the check again.</p>
+
+          <p class="govuk-body">Read the <a href="#">employers' code of practice</a> to find out more about right to work checks.</p>
+
+          <!-- end start share status and update details -->
+          </div>
+        </div>
+
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <div class="SS-status-card_header-checker-double">
+              <h2 class="govuk-heading-m" style= "padding-left: 15px">Details of check</h2>
+
+
+              <div class="grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <h3 class="govuk-heading-s">Company name</h3>
+                  <p>test</p>
+                </div>
+                </div>
+
+              <div class="grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <h3 class="govuk-heading-s">Date of check</h3>
+                  <p class="govuk body">7 Feburary 2022</p>
+              </div>
+
+              <div class="grid-row">
+                  <div class="govuk-grid-column-one-third">
+                    <h3 class="govuk-heading-s">Reference number</h3>
+                    <p>SC-4CL8BW2-ZX</p>
+                </div></div>
+            </div>
+</div>
+            </div>
+        </div>
+        <div style="margin: 0px 0px 30px 0px;">
+
+              <p style="display:inline;margin:0 30px 0 0;"><span class="hod-printer side-space icon-medium"></span><a href="#" onclick="window.print()" class="no-print">Print this page</a></p>
+
+              <p style="display:inline;margin:0 30px 0 0;"><span class="hod-file-empty side-space icon-medium"></span><a href="#" onclick="window.print()" class="no-print">Download PDF</a></p>
+</div>
+
+      <p class="govuk-body govuk-!-padding-top-3">
+      <a href="checker-start">Finish and leave service</a>
+      </p>
+        </div>
+
+    {% endblock %}
