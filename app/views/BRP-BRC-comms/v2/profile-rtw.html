@@ -1,0 +1,101 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+BRP/BRC Comms
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Your right to work</h1>
+
+     <!-- Status card start -->
+        <div class="SS-status-card">
+          <div class="SS-status-card_header">
+            <h2 class="govuk-heading-s SS-white">Bella-Rose Samantha Wallis</h2>
+          </div>
+        <div class="SS-status-card_body clearfix">
+
+            <div class="SS-threequarter">
+              <div class="SS-status-card__bodyPadding">
+                <h2 class="govuk-heading-m">Your rights in the UK</h2>
+                  <p class="govuk-body">You were granted skilled worker status on 1 February 2021. You can work in the UK until 13 January 2024.</p>
+                  <p class="govuk-body">Your National Insurance number is AB123456C.</p>
+                  <p class="govuk-body">As a <a href="https://www.gov.uk/tier-2-general">skilled worker</a>, you can:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>work in the job you are sponsored for</li>
+                      <li>work in another job for up to 20 hours a week as long as it has got the same occupation code as your main role, or is a job on the <a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-k-shortage-occupation-list">Shortage Occupation List</a>.</li>
+                      <li>complete the notice period of a contract you had already started before you made your application</li>
+                      <li>do voluntary work</li>
+                    </ul>
+
+                  <p class="govuk body">You cannot:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>work as a doctor or dentist in training except on a Health Education England foundation programme</li>
+                      <li>work as an entertainer</li>
+                      <li>work as a professional sportsperson or coach</li>
+                      <li>run a business or be self-employed unless you have applied for a start-up visa</li>
+                    </ul>
+
+                       <div class="govuk-inset-text">
+                        If your name is spelt wrong or your photo is not correct, contact the <a href="#">Immigration help desk</a>.
+                       </div>
+
+              </div>
+            </div>
+              <!--Image start-->
+              <div class="SS-onequarter">
+                <img class="SS-profile-pic" src="../../../../public/images/bella-rose_wallis.jpg" />
+                <input id="rotateImage" class="button-secondary no-print" aria-label="Rotate profile image" type="button" value="Rotate ↻">
+              </div>
+              <!--Image end-->
+            </div>
+          </div>
+<br>
+          <!-- Status card end -->
+          <!--Warning text start-->
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                     This page cannot be used as proof of your immigration status.
+                  </strong>
+              </div>
+          <!--Warning text stop-->
+                 <p>To share your details with an employer, you need to create a share code.</p>
+
+                 <a href="create-share-code-rtw">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Continue
+                    </button>
+                 </a>
+
+                 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+                 {{ govukInsetText({
+                   text: "If you have a biometric residence card, biometric residence permit or Frontier Worker permit, you must get a share code to prove your right to work from 6 April 2022.  You cannot use your card or permit as proof, even if it shows a later expiry date."
+                 }) }}
+
+        <div class="govuk-!-padding-bottom-4"></div>
+        <div>
+          <p><a href="start-page">Finish and leave service</a></p>
+        </div>
+
+
+      </div>
+    </div>
+
+    {% endblock %}

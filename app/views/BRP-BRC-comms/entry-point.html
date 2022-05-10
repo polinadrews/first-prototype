@@ -1,0 +1,65 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Tell us about your immigration status
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<!-- <div class="govuk-width-container"> -->
+
+
+  <!-- <main class="govuk-main-wrapper " id="main-content" role="main"> -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/entry-point-answer" method="post" class="form">
+
+
+  {{ govukRadios({
+  idPrefix: "immigration-status",
+  name: "immigration-status",
+  fieldset: {
+    legend: {
+      text: "Tell us about your immigration status",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "I have a UK Visas and Immigration account",
+      text: "I have a UK Visas and Immigration account"
+    },
+    {
+      value: "I have status under the EU Settlement Scheme",
+      text: "I have status under the EU Settlement Scheme"
+    },
+    {
+      value: "I have a biometric residence card or permit",
+      text: "I have a biometric residence card or permit"
+    }
+  ]
+}) }}
+
+
+            <button class="govuk-button">Continue</button>
+          </form>
+<br>
+
+
+
+
+      </div>
+    </div>
+
+{% endblock %}

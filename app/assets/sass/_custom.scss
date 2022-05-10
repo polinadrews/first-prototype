@@ -1,0 +1,817 @@
+.SS-index-sidepanel {
+    min-height:100px;
+    padding:20px;
+    font-family: nta, Arial, sans-serif;
+}
+
+.SS-form-spacing {
+    margin: 30px 0 0 0; //adds spacing at top of form elements like radios and buttons
+}
+
+/* utilities   ------------  */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* Visa page cards  ------------  */
+
+ .SS-profile-pic {
+    width:100%;
+}
+
+.SS-profile-pic-align-right {
+   width:100%;
+   // padding-left: 30px;
+   box-sizing: border-box;
+   // margin: 0 auto;
+}
+
+.SS-profile-pic2 {
+  width:100%;
+   padding-right: 15px;
+}
+
+.SS-status-card {
+    overflow: hidden;
+    border: 1px solid $govuk-brand-colour;
+}
+
+.SS-status-card_header {
+    background-color: $govuk-brand-colour;
+    padding: 10px 10px 0 15px;
+    height: 32px;
+}
+
+.SS-status-card-preview {
+    overflow: hidden;
+    border: 1px solid $govuk-brand-colour;
+}
+
+.SS-status-card_header-preview {
+    background-color: $govuk-brand-colour;
+    padding: 10px 10px 0 15px;
+    height: 32px;
+}
+
+.SS-status-card_header-preview-text {
+    background-color: $govuk-brand-colour;
+    padding: 10px;
+     height: 52px;
+    border-bottom: 1px solid $govuk-brand-colour;
+    border-left:  1px solid $govuk-brand-colour;
+    border-right:  1px solid $govuk-brand-colour;
+    margin-bottom: 20px;
+}
+
+.SS-status-card_header-checker {
+    background-color: #f3f2f1;
+    padding: 10px;
+    height: 152px;
+    border-top: 1px solid $govuk-border-colour;
+    border-bottom: 1px solid $govuk-border-colour;
+    border-left:  1px solid $govuk-border-colour;
+    border-right:  1px solid $govuk-border-colour;
+    margin-bottom: 20px;
+}
+
+.SS-status-card_header-checker-double {
+    background-color: #f3f2f1;
+    padding: 10px;
+    height: 250px;
+    border-top: 1px solid $govuk-border-colour;
+    border-bottom: 1px solid $govuk-border-colour;
+    border-left:  1px solid $govuk-border-colour;
+    border-right:  1px solid $govuk-border-colour;
+    margin-bottom: 20px;
+}
+
+
+.SS-status-card_header-greybox {
+    background-color: #f3f2f1;
+    padding: 10px;
+    border-top: 1px solid $govuk-border-colour;
+    border-bottom: 1px solid $govuk-border-colour;
+    border-left:  1px solid $govuk-border-colour;
+    border-right:  1px solid $govuk-border-colour;
+    margin-bottom: 20px;
+}
+
+.SS-status-card_body {
+    padding: 15px;
+}
+
+.SS-status-card__bodyPadding {
+    padding:0 0 0 15px;
+}
+
+.SS-status-card-outline {
+    overflow: hidden;
+    padding: 15px;
+    border: 1px solid $govuk-border-colour;
+}
+
+/* utility cards for actions from page.
+
+SS-grid row are a set of classes whcih match govuk grid layout but work with flexbox
+*/
+
+.SS-grid-row {
+    margin-right: -15px;
+    margin-left: -15px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    justify-content: space-around;
+}
+
+.SS-utility-card2 {
+    overflow: hidden;
+    background-color: govuk-colour("light-grey", $legacy: "grey-4");
+    margin:30px 0 0 0;
+    border: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
+    width: calc(33% - 20px);
+}
+
+/* styling of utility card when child __action __intro markup is removed. So padding is applied. */
+.SS-grid-row3 {
+    // margin-right: -15px;
+    // margin-left: -15px;
+    display:flex;
+    flex-wrap:nowrap;
+    // align-items:flex-start;
+    justify-content: space-between;
+    // justify-content:stretch;
+    align-content:stretch;
+}
+
+.SS-utility-card3 {
+    overflow: hidden;
+    padding: 15px;
+    background-color: govuk-colour("light-grey", $legacy: "grey-4");
+    margin:30px 0 0 0;
+    border: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
+    width: 430px;
+}
+
+/* end of experiments */
+
+.SS-utility-card {
+    display:flex;
+    flex-direction:column;
+    overflow: hidden;
+    background-color: govuk-colour("light-grey", $legacy: "grey-4");
+    margin:30px 0 0 0;
+    border: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
+}
+
+.SS-utility-card__intro {
+    padding:15px;
+}
+
+.SS-utility-card__actions {
+    flex:1;
+    background-color: #ffffff;
+    padding:15px;
+    border-top: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
+}
+
+/* hack to create the sign in links */
+.signing-hack {
+    position:relative;
+}
+
+.signing {
+    position:absolute;
+    z-index:100;
+    top:-22px;
+    right:15px;
+}
+.signing a {
+    text-decoration: none;
+}
+/* Mobile hacks - fake sign out buttons on mobile. Create full width utility cards */
+@media screen and (max-width: 641px) {
+    .signing {
+        top: 10px;
+        right: 15px;
+        font-size: 14px;
+
+    }
+    .govuk-phase-banner {
+        display:none;
+    }
+    .govuk-main-wrapper {
+        padding-top:40px;
+    }
+    .SS-grid-row3 {
+        display:block;
+    }
+    .SS-utility-card3 {
+        width:calc(100% - 33px);
+    }
+  }
+
+/* contact deatils table */
+.SS-dlist {
+margin:0;
+padding:0;
+font-family: nta, Arial, sans-serif;
+font-size:1.18rem;
+}
+
+.SS-dlist__label::after {
+    content: ": ";
+  }
+.SS-dlist__label {
+    margin:0 15px 0 0;
+    padding:0;
+    float:left;
+    font-weight:900;
+}
+
+.SS-dlist__value {
+    margin:0;
+    padding:0;
+    font-family: nta, Arial, sans-serif;
+}
+
+.SS-white {
+    color: govuk-colour("white");
+}
+
+.SS-onequarter {
+    float:right;
+    width:25%;
+}
+
+.SS-threequarter {
+    float:right;
+    width:75%;
+}
+
+.SS-onequarter-table {
+    float:right;
+    width: 12.5%;
+    padding-right: 15px;
+}
+
+// Propose replacing step icons with circles
+.circle {
+  display: inline-block;
+  border-radius: 50%;
+
+  background: black;
+  color: white;
+
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+// All step circles are 24px x 24px
+.circle-step {
+  min-width: 24px;
+  min-height: 24px;
+  line-height: 24px;
+}
+
+.circle-step-large {
+  font-size: 19px;
+  min-width: 38px;
+  min-height: 38px;
+  line-height: 38px;
+}
+
+.number-list-align {
+  display: block;
+  margin-right: 10px;
+  // margin-bottom: 20px;
+  float: left;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.number-list-group {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+  }
+
+/* HOD confirmation panel ------------  */
+
+.confirmation-summary-HOD {
+  display: block;
+  border: 4px solid #00703c;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 20px 30px 0px 30px;
+  word-wrap: break-word;
+  }
+
+.confirmation-summary-list {
+  padding-left: 0;
+  padding-top: 15px;
+  }
+
+/* Help on top right styling ------------  */
+
+.help-custom {
+  background: #dee0e2;
+  padding: 10px;
+  // margin-bottom: 10px;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: center;
+
+}
+
+.email-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  // align-content: space-between;
+}
+
+.email-input {
+  width: 83%;
+}
+
+.email-button {
+  display: flex;
+  // align-items: flex-end;
+  align-content: center;
+
+}
+
+//UCDA-225 global navigation
+
+
+/* responsive nav  */
+.resp-nav-placeholder {
+    position: relative;
+    height: 40px;
+}
+.resp-nav-placeholder-2 {
+    position: relative;
+    // height: 40px;
+}
+
+.signout-link {
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    font-weight: bold;
+}
+
+.resp-nav {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #b1b4b6;
+    width: 100%;
+}
+
+.resp-nav a {
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 12px 0 0 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.nav-list li {
+    float: left;
+}
+
+.nav-list li a {
+    display: block;
+    padding: 0 10px 5px;
+
+}
+
+.nav-list li a:link,
+.nav-list li a:visited,
+.nav-list li a:active {
+    color: #0b0c0c;
+}
+
+.nav-list li a:hover {
+    color: #003078;
+}
+
+li.selected a {
+    border-bottom: 5px solid #1d70b8;
+}
+
+/* Mobile hacks - fake sign out buttons on mobile. accountv4 */
+@media screen and (max-width: 641px) {
+    .resp-nav {
+        top: 0;
+        left: 0;
+    }
+
+    .signout-link {
+        top: -72px;
+    }
+
+    .nav-list {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    .nav-list li a {
+        padding: 0 22px 5px 22px;
+
+    }
+
+    .govuk-phase-banner {
+        display: none;
+    }
+
+    .govuk-main-wrapper {
+        padding-top: 40px;
+    }
+
+    .SS-grid-row3 {
+        display: block;
+    }
+
+    .SS-utility-card3 {
+        width: calc(100% - 33px);
+    }
+}
+
+
+// hack to make the fake contact page hint text indent Carolyn/checkee/your-details
+#contact-hint {
+    margin-left: 13px;
+}
+
+.govuk-button .btn-hack a:link,
+.govuk-button .btn-hack a:visited,
+.govuk-button .btn-hack a:hover,
+.govuk-button .btn-hack a:active {
+    color: white;
+}
+
+
+
+// Hacks to make the nav work for /Dina/checkee/home. The full account version of the navigation
+.nav-list-v2 {
+    list-style-type: none;
+    margin: 12px 0 0 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.nav-list-v2 li {
+    float: left;
+}
+
+.nav-list-v2 li.right {
+    float: right;
+}
+
+.nav-list-v2 li a {
+    display: block;
+    padding: 0 10px 5px;
+
+}
+
+.nav-list-v2 li a:link,
+.nav-list-v2 li a:visited,
+.nav-list-v2 li a:active {
+    color: #0b0c0c;
+}
+
+.nav-list-v2 li a:hover {
+    color: #003078;
+}
+
+// responsive nav for UCDA-225 iteration 1a
+.nav-list-v3 {
+    list-style-type: none;
+    margin: 12px 0 0 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.nav-list-v3 li {
+    float: left;
+}
+
+.nav-list-v3 li.right {
+    float: right;
+}
+
+.nav-list-v3 li a {
+    display: block;
+    padding: 0 10px 5px;
+
+}
+
+.nav-list-v3 li a:link,
+.nav-list-v3 li a:visited,
+.nav-list-v3 li a:active {
+    color: #0b0c0c;
+}
+
+.nav-list-v3 li a:hover {
+    color: #003078;
+    border-bottom: 5px solid #1d70b8;
+}
+
+.nav-list-v3 li.selected a {
+    border-bottom: 5px solid #1d70b8;
+}
+
+
+
+// media query for under 640px has per GDS DS breakpoint
+@media screen and (max-width: 640px) {
+    .nav-list-v3 li {
+        float: left;
+        width: 33%;
+        text-align: center;
+    }
+
+    .nav-list-v3 {
+        font-size: 1.1em;
+    }
+}
+
+// media query for under 520px when the horiz nav items visually break
+@media screen and (max-width: 520px) {
+    .nav-list-v3 li {
+        width: auto;
+        float: none;
+    }
+
+    .nav-list-v3 li a {
+        border-bottom: 1px solid #b1b4b6;
+        padding: 10px;
+    }
+
+    .nav-list-v3 {
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    .resp-nav-placeholder {
+        position: relative;
+        height: 130px;
+    }
+
+    .resp-nav {
+        border-bottom: none;
+    }
+}
+
+
+// HACK - gov phase banner override
+.SS-govuk-phase-banner {
+    border-top: 1px solid #BFC1C3;
+    border-bottom: none;
+    margin-bottom: -40px;
+    margin-top: 40px;
+    padding: 15px 0;
+}
+
+// UCDA-238 to create a visa and immigration account header
+
+.SS-account-heading {
+    font-family: "nta", arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+    font-size: 1.4em;
+}
+
+.SS-account-header {
+    background-color: #e8e8e8;
+    padding: 15px 0 13px 15px;
+    border-bottom: 1px solid #b1b4b6;
+}
+
+.SS-nav-placeholder {
+    position: relative;
+    height: 100px;
+}
+
+.SS-resp-nav {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #b1b4b6;
+    width: 100%;
+    background-color: #f8f8f8;
+}
+
+.SS-resp-nav a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 520px) {
+    .SS-nav-placeholder {
+        height: 190px;
+    }
+}
+
+.SS-panel-body {
+  background-color: #e8e8e8;
+}
+
+
+
+
+
+//  - rotate button
+
+/*
+Styles for rotate button
+ */
+#image-container {
+  margin-bottom: 10px;
+}
+#photo {
+  display: block;
+}
+#rotateImage {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+.js-enabled #rotateImage {
+  display: block;
+}
+
+
+.button-secondary {
+  background-color: #dee0e2;
+  position: relative;
+  padding: .526315em .789473em .263157em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c;
+  box-shadow: 0 1px 0 #0b0c0c;
+  border: #0b0c0c 1px solid; }
+.button-secondary:visited {
+  background-color: #dee0e2; }
+.button-secondary:hover, .button-secondary:focus {
+  background-color: #d0d3d6; }
+.button-secondary:active {
+  top: 2px;
+  -webkit-box-shadow: 0 0 0 #dee0e2;
+  -moz-box-shadow: 0 0 0 #dee0e2;
+  box-shadow: 0 0 0 #dee0e2; }
+.button-secondary.disabled, .button-secondary[disabled="disabled"], .button-secondary[disabled] {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5; }
+.button-secondary.disabled:hover, .button-secondary[disabled="disabled"]:hover, .button-secondary[disabled]:hover {
+  cursor: default;
+  background-color: #dee0e2; }
+.button-secondary.disabled:active, .button-secondary[disabled="disabled"]:active, .button-secondary[disabled]:active {
+  top: 0;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe; }
+.button-secondary:link, .button-secondary:link:focus, .button-secondary:hover, .button-secondary:focus, .button-secondary:visited {
+  color: #0b0c0c; }
+.button-secondary:before {
+  content: "";
+  height: 110%;
+  width: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0; }
+.button-secondary:active:before {
+  top: -10%;
+  height: 120%; }
+.button-secondary[disabled]:active {
+  box-shadow: 0 0px 0 #0b0c0c; }
+.sentenceCase:first-letter {
+  text-transform: uppercase;
+}
+
+
+//MODAL DIALOGUE
+dialog {
+	display: block;
+  margin: 0;
+}
+.no-scroll-html {
+	overflow: hidden;
+}
+.no-scroll {
+	overflow: hidden;
+}
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: #000;
+	opacity: .8;
+	z-index: 666;
+	cursor: pointer;
+}
+.modal {
+	font-family: "GDS Transport", arial, sans-serif;
+	font-weight: 400;
+	text-transform: none;
+	line-height: 1.25;
+	-webkit-font-smoothing: antialiased;
+    position: fixed;
+  z-index: 667;
+  max-width: 280px;
+  min-width: 200px;
+  padding: 30px;
+  background: #fff;
+  border: 3px solid #000000;
+    left: 50%;
+    top: 25%;
+    -ms-transform: translate(-50%,-25%);
+    -moz-transform:translate(-50%,-25%);
+    -webkit-transform: translate(-50%,-25%);
+     transform: translate(-50%,-25%);
+}
+@media (min-width: 641px) {
+	.modal {
+		font-size: 19px;
+		line-height: 1.31579;
+  	min-width: 580px;
+	}
+  .modal-button {
+    float: left;
+    padding-right: 15px;
+  }
+  .modal-link {
+    display: inline-block;
+    padding-top: 10px;
+  }
+
+  .modal-link-2 {
+    display: inline-block;
+    padding-top: 10px;
+  }
+}
+@media (min-height: 300px) {
+	.modal {
+    top: 25%;
+	}
+}
+  .modal-link {
+    display: block;
+  }
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+//tertiary button
+.govuk-button--tertiary {
+
+      background-color: #035F9C;
+
+}
+
+.govuk-button--tertiary:hover {
+  color: #ffffff;
+  background-color: #035F9C;
+  border: 2px, #035F9C;
+}

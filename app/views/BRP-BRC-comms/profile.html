@@ -1,0 +1,81 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+BRP/BRC comms
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Your right to work</h1>
+
+     <!-- Status card start -->
+        <div class="SS-status-card">
+          <div class="SS-status-card_header">
+            <h2 class="govuk-heading-s SS-white">Right to work</h2>
+          </div>
+        <div class="SS-status-card_body clearfix">
+
+            <div class="SS-threequarter">
+              <div class="SS-status-card__bodyPadding">
+                <h2 class="govuk-heading-l">Bella-Rose Samantha Wallis</h2>
+                  <p class="govuk-body govuk-!-margin-bottom-5">You have permission to work in the UK from 19 October 2021. You can only be employed on a work placement which is part of the course your student visa is based on.</p>
+                  <p class="govuk-body govuk-!-margin-bottom-5">The work placement must be:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>a compulsory part of your course</li>
+                      <li>assessed as part of your course<?li>
+                    </ul>
+                    <p>You may also be able to <a href="https://www.gov.uk/volunteering">volunteer or work for a student union</a>.<p>
+
+              </div>
+            </div>
+              <!--Image start-->
+              <div class="SS-onequarter">
+                <img class="SS-profile-pic" src="../../../../public/images/bella-rose_wallis.jpg" />
+                <input id="rotateImage" class="button-secondary no-print" aria-label="Rotate profile image" type="button" value="Rotate ↻">
+              </div>
+              <!--Image end-->
+            </div>
+          </div>
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+          <!-- Status card end -->
+
+
+
+          <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m">Prove your right to work</h2>
+                 <p>If you need to prove your right to work, you can do this online with a share code.</p>
+
+                 <a href="create-share-code">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Get a share code
+                    </button>
+                 </a>
+
+                 <p class="govuk-body govuk-!-margin-bottom-6">
+                If any of your details or information on this page is not correct, <a href="https://www.gov.uk/contact-ukvi-inside-outside-uk">contact UK Visas and Immigration</a>.
+                 </p>
+</div></div>
+
+        <div>
+          <p><a href="signed-out">Finish and leave service</a></p>
+        </div>
+
+
+      </div>
+    </div>
+
+    {% endblock %}

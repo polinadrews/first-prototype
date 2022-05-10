@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-1044
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/global-navigation-signout.html" %}
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <form action="share-code-RTW/create-share-code" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Your right to work
+            </h1>
+          </legend>
+
+
+
+          <!-- Status card start -->
+
+          <div class="SS-status-card">
+            <div class="SS-status-card_header">
+              <h2 class="govuk-heading-s SS-white">Right to work</h2>
+            </div>
+            <div class="SS-status-card_body clearfix">
+
+              <div class="SS-threequarter">
+                <div class="SS-status-card__bodyPadding">
+                  <h2 class="govuk-heading-l">John Doe</h2>
+                  <p>You can work in the UK.</p>
+
+                </div>
+              </div>
+              <!--  -->
+              <div class="SS-onequarter">
+                <img class="SS-profile-pic" src="../../../../public/images/john-doe.png" />
+              </div>
+              <!--  -->
+            </div>
+          </div>
+          <br>
+          <!-- Status card end -->
+
+          <!--start share status and update details  -->
+
+
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+
+              <h2 class="govuk-heading-m">Prove your right to work</h2>
+
+              <p class="govuk-body">If you need to prove your right to work, you can do this online with a share code.</p>
+
+              <a href="#">
+                <button class="govuk-button" data-module="govuk-button">
+                  Get a share code
+                </button>
+              </a>
+
+              {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+              {{ govukInsetText({
+                text: "If you have a biometric residence card, biometric residence permit or Frontier Worker permit, you must get a share code to prove your right to work from 6 April 2022.  You cannot use your card or permit as proof, even if it shows a later expiry date."
+              }) }}
+
+              <p class="govuk-body">If any of your details or information on this page is not correct,
+                <a href="https://www.gov.uk/contact-ukvi-inside-outside-uk/">contact UK Visas and Immigration</a>.
+              </p>
+
+              <!-- end start share status and update details -->
+
+            </div>
+
+          </div>
+      </div>
+
+  <script type="text/javascript">
+    time = 120;
+  interval = setInterval(function() {
+      time--;
+      document =  time
+      if (time == 0) {
+          // stop timer
+          clearInterval(interval);
+          // click
+          document.getElementById('label_modal_1').click();
+      }
+  }, 1000)
+  </script>
+
+
+
+
+  <p>
+     <a href="#" class="js-modal" data-modal-text=" <p>For security, you will be signed out in <span style='font-weight: bold; white-space:nowrap;'>5 minutes</span>.</p>" data-modal-title="You're about to be signed out" data-modal-close-route="signed-out"
+        data-modal-close-text="Continue on this page" data-modal-close-title="Close this window">Sign out</a>
+    </p>
+
+
+  </div>
+</div>
+
+{% endblock %}

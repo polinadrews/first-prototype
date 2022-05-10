@@ -17,5 +17,29 @@ router.post('/juggling-balls-answer', function (req, res) {
     res.redirect('/./ineligible')
   }
 
+  })
+
+  // BRP-BRC comms entry points
+  router.post('/entry-point-answer', function (req, res) {
+
+    var immigrationstatus = req.session.data['immigration-status']
+
+    if (immigrationstatus == "I have a biometric residence card or permit"){
+
+      res.redirect('BRP-BRC-comms/brp-number')
+    }
+
+    if (immigrationstatus == "I have a UK Visas and Immigration account"){
+
+      res.redirect('BRP-BRC-comms/ukvi-why')
+    }
+
+    if (immigrationstatus == "I have status under the EU Settlement Scheme"){
+
+      res.redirect('BRP-BRC-comms/euss-why')
+    }
+
+
+
 })
 module.exports = router

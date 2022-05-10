@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+You cannot use this service
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+<!-- {% include "includes/backlink.html" %} -->
+{% endblock %}
+
+{% block content %}
+
+<!-- <div class="govuk-width-container"> -->
+
+
+  <!-- <main class="govuk-main-wrapper " id="main-content" role="main"> -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">You cannot use this service to prove your right to work</h2>
+
+        <p class="govuk body">Instead you can show your identity documents directly to an employer. </p>
+
+          <p class="govuk body">To prove your right to work using this service, you must have one of the following:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a UK Visas and Immigration account</li>
+          <li>status under the EU Settlement Scheme</li>
+          <li>a biometric residence card or permit</li>
+        </ul>
+        
+        <p><a href="https://www.gov.uk/" class="govuk-link">Back to GOV.UK</a></p>
+    </div>
+  </div>
+
+{% endblock %}

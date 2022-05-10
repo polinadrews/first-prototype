@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+BRP/BRC comms
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation" style="background:#00703c">
+      <h1 class="govuk-panel__title">
+        Email sent
+      </h1>
+    <div class="govuk-panel__body">
+        <!--<div class="ss-body-panel">-->
+
+
+        We have sent an email to<br><strong>{{ data['email'] }}</strong>
+      </div>
+    </div>
+<p class="govuk-body govuk-!-margin-bottom-5"></p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk body">Contact the person checking your status to make sure they have all the information they need.</p>
+      <p class="govuk-body">To view your right to work, they must:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>go to <a href="https://www.gov.uk/view-right-to-work">www.gov.uk/view-right-to-work</a></li>
+        <li>enter your date of birth</li>
+        <li>use the share code from this email by 3 March 2022</li>
+        </ul>
+
+<p class="govuk-body govuk-!-margin-top-6"><a href="entry-point">Share with another employer</a></p>
+
+<p class="govuk-body govuk-!-margin-top-6"><a href="signed-out">Finish and leave service</a></p>
+
+
+
+
+        </div>
+    </div>
+      {% endblock %}

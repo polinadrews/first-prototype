@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What is your biometric residence card number?
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<!-- <div class="govuk-width-container"> -->
+
+
+  <!-- <main class="govuk-main-wrapper " id="main-content" role="main"> -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+          <form action="enter-DOB" method="post" class="form">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                    What is your biometric residence card or permit number?
+                    </h1>
+                  </legend>
+                  <br>
+
+
+
+                  <div class="block-space">
+                    <img src="/public/images/card-example-xsmall.png" alt="a biometric residence card or permit. The card number is shown in the top right corner.">
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-font-weight-bold" for="width-10">
+                      Biometric residence card or permit number
+                    </label>
+                    <div id="event-name-hint" class="govuk-hint">
+                      For example, RE1234567
+                    </div>
+                    <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+                  </div>
+                </fieldset>
+<br>
+<br>
+              </div>
+            <button class="govuk-button">Continue</button>
+          </form>
+<br>
+
+
+
+
+      </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+BRP/BRC comms
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="add-checker-email" method="post" class="form">
+
+      <h1 class="govuk-heading-l">
+        Details you need to share
+      </h1>
+
+
+
+
+      <h2 class="govuk-heading-xl">WBC &nbsp; 940 &nbsp; B2C</h2>
+
+      <div class="govuk-inset-text">
+        This code is valid until 3 March 2022.
+      </div>
+
+
+      <!-- Previous code - shorter sentences made the number alignment go inwards -->
+
+      <h2 class="govuk-heading-m">What you need to do next</h2>
+
+      <ul class="number-list-group govuk-!-padding-bottom-4">
+        <li class="govuk-list">
+          <span class="circle number-list-align">1</span>
+          Give this share code and your date of birth to the person you want to prove your status to.
+        </li>
+        <li class="govuk-list">
+          <span class="circle number-list-align">2</span>
+          To see your right to work, they must enter the share code and your date of birth at <a href="https://www.gov.uk/view-right-to-work"> www.gov.uk/view-right-to-work</a>.
+        </li>
+        <li class="govuk-list">
+          <span class="circle number-list-align">3</span>
+          Contact them to make sure they have all the information they need.
+        </li>
+      </ul>
+
+
+      <div style="margin: 0px 0px 30px 0px;">
+        <p style="display:inline;margin:0 30px 0 0;"><span class="hod-printer side-space icon-medium"></span><a href="#" onclick="window.print()" class="no-print">Print this page</a></p>
+      <!--  <p style="display:inline;margin:0 30px 0 0;"><span class="hod-file-empty side-space icon-medium"></span><a href="#" onclick="window.print()" class="no-print">Download PDF</a></p> -->
+      </div>
+
+
+      <button type="submit" class="govuk-button">
+        Share code by email
+      </button>
+
+
+    <p>
+       <a href="signed-out">Finish and leave service</a>
+      </p>
+
+
+  </div>
+</div>
+
+{% endblock %}
