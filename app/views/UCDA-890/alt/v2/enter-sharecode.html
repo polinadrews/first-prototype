@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-890
+{% endblock %}
+
+{% set serviceName %}
+  View a job applicant's right to work
+{% endset %}
+
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+  {% include "includes/backlink.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What is the job applicant's share code?
+      </h1>
+
+      <form action="enter-DOB" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Share code
+        </label>
+        <span id="event-name-hint" class="govuk-hint">
+          For example, W12 345 67G
+        </span>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+      </div>
+
+
+      <div class="govuk-inset-text">
+      <p>The share code is created when the person gives you permission to view their status.</p>
+
+      <p>Ask them to share the code with you.</p>
+
+      <p>If you need help using this service, contact <a href="UK Visas and Immigration">UK Visas and Immigration</a>.</p>
+    </div>
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+    </div>
+</div>
+
+{% endblock %}

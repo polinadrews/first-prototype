@@ -1,0 +1,52 @@
+{% extends "layout_umd.html" %}
+{% set serviceName = "Update your details" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Before you continue</h1>
+    <p class="govuk-body">You've told us you want to register a new identity document to your UK Visas and Immigration account. </p>
+    <p class="govuk-body">To request this update, you'll need to:</p>
+    <ol class="govuk-list govuk-list--number">
+      <li>Give us the details of your new identity document.</li>
+      <li>Upload a photo or a scan of your new identity document.</li>
+    </ol>
+    <p>We will need to check the information you give us. </p>
+    <p>We'll email you once we have added your new identity document to your account, or to let you know if there was a problem. </p>
+    {{ govukWarningText({
+      text: "While we check your request, you must continue to use your previous document details to sign in.",
+      iconFallbackText: "Warning"
+    }) }}
+
+    <!-- {{ govukInsetText({
+      text: "While we check your request, you must continue to use your previous document details to sign in."
+    }) }} -->
+    <h2 class="govuk-heading-m"> After we have added your document</h2>
+    <p>You must then sign in with the details of the new identity document. The previous details will no longer work.  </p>
+    <p>When you travel, you can now use any of the identity documents registered to your account (as long as they meet the <a href="https://www.gov.uk/uk-border-control" class="govuk-link">rules on entering the UK</a>). This includes the identity document you applied with and any others you told us about since then.  </p>
+    {{ govukButton({
+      text: "Continue",
+      href: "../gidv/nationality",
+      classes: "govuk-!-margin-top-2"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+{% set serviceName = "" %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Apply to enter or stay in the UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-l">Using the 'EU Exit: ID Document Check' app</h1>
+
+  <p>The app is free. If you use it, it is unlikely that you will need to send us your identity document by post.</p>
+
+  <h2 class="govuk-heading-m">What you will need</h2>
+
+  <p>You can use the app on:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>an Android phone</li>
+    <li>an iPhone 7 or above</li>
+  </ul>
+
+  <p>If you need to, you can use someone else’s phone.</p>
+
+  <p>If you are an EU, EEA or Swiss citizen, use either your:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>passport</li>
+    <li>national identity card</li>
+  </ul>
+
+  <p>If you are not an EU, EEA or Swiss citizen, either use your:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>biometric residence card</li>
+    <li>biometric residence permit</li>
+  </ul>
+
+  <h2 class="govuk-heading-m">If you use a national identity card</h2>
+
+  <p>To use the app, your national identity card must have a biometric chip.</p>
+
+  <p>If it has a chip, it will have this symbol on it:</p>
+
+  <img src="/../../../../public/images/id-doc/biometric.50d99238.png" alt="Symbol for a biometric document" style="width: 5em;">
+
+  <p>If your card does not have a biometric chip, you can use the app but you must send us your card by post after you apply.</p>
+
+  <h2 class="govuk-heading-m">Phones that can use the app</h2>
+
+  <p>Your phone must have NFC to read the biometric chip in your identity document.</p>
+
+  <p>The phone normally has NFC if you can use it to make contactless payments. You can check the phone's settings to see if it has NFC.</p>
+
+  <p>If your phone does not have NFC, you can use the app but you must send us your identity document by post after you apply.</p>
+
+  <h2 class="govuk-heading-m">How it works</h2>
+
+  <p>The app proves your identity by checking if you have a genuine document that belongs to you. It:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>scans the details on your document and adds this information to your application</li>
+    <li>scans your face to check the document belongs to you</li>
+    <li>takes a digital photo of you</li>
+  </ul>
+
+  <h2 class="govuk-heading-m">After you use the app</h2>
+
+  <p>You must complete the rest of your application separately online as the app will only check your identity.</p>
+
+  <p>After you have finished using the app we will send you an email that tells you how to complete your application.</p>
+
+  <h2 class="govuk-heading-m">Security</h2>
+
+  <p>The app sends us your information securely. No information is stored on the app or on your phone after you close the app.</p>
+
+  <h2 class="govuk-heading-m govuk-!-padding-top-7">Get the iPhone app</h2>
+
+  <p>Download the free EU Exit: ID Document Check app on the App Store.</p>
+
+  <img src="https://apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/euss/assets/static/media/apple-store-preferred-badge.8c4986ee.svg" alt="Symbol for apple store" width="160px" height="54px">
+
+  <h2 class="govuk-heading-m govuk-!-padding-top-9">Get the Android app</h2>
+
+  <p>Download the free EU Exit: ID Document Check app on Google Play.</p>
+
+  <img src="/../../../../public/images/euss/google-play.png" alt="Symbol for google store" width="185px" height="auto">
+
+  <h2 class="govuk-heading-m govuk-!-padding-top-9">I will prove my identity in another way</h2>
+
+  <p><a href="prove-id-doc-why">I want to book an appointment or send my identity document by post</a>
+
+  </div>
+</div>
+
+{% endblock %}

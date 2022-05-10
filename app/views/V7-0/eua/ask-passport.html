@@ -1,0 +1,48 @@
+{% set serviceName = "" %}
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="ask-dob-ppt" method="post" novalidate>
+
+    <span class="govuk-caption-l">Sign in</span>
+
+      {{ govukInput({
+        label: {
+          text: "What is your passport number?",
+          classes: "govuk-label--l"
+        },
+        isPageHeading: true,
+        hint: {
+          text: "Can contain letters for example, 120382978A"
+        }
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      <div class="govuk-inset-text">
+          If you do not have your passport number, contact <a href="https://www.gov.uk/contact-ukvi-inside-outside-uk">UK Visa and Immigration</a>.
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

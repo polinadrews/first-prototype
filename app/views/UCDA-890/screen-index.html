@@ -1,0 +1,119 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Checkers doing multiple checks
+{% endblock %}
+
+
+{% set serviceName %}
+UCDA-890
+{% endset %}
+
+{% block beforeContent %}
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds"><strong class="govuk-tag">DRAFT</strong>
+        <span class="govuk-caption-l">December 2021</span>
+      </div>
+      </div>
+    <br>
+    <h1 class="govuk-heading-xl">
+     Checkers doing multiple checks
+    </h1>
+
+    <p>Addition of a CTA button at the very bottom of the profile that enables the checker to go back to the "Enter Sharecode" page.</p>
+    <p>This research will also aim to test the new BRC/BRP notice informing users of the changes to Right to Rent checks.</p>
+
+<br>
+        <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">RTR</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Screen Index</th>
+            <th scope="col" class="govuk-table__header">Description</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="RTR/start">Start page</a></th>
+            <td class="govuk-table__cell">Existing screen</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="RTR/brc-brp-notice">BRC/BRP notice</a></th>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">New</strong> Addition of BRC/BRP notice</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="RTR/add-share-code">Enter shade code</a></th>
+            <td class="govuk-table__cell">Existing screen</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="RTR/add-dob">Enter DOB</a></th>
+            <td class="govuk-table__cell">Existing screen</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="RTR/existing-add-checker-details">Enter checker details</a></th>
+            <td class="govuk-table__cell">Existing screen</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="RTR/statutory-excuse">Profile</a></th>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">New</strong> Addition of “check another tenant” CTA</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+<br><br>
+<table class="govuk-table">
+<caption class="govuk-table__caption govuk-table__caption--m">RTW</caption>
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header">Screen Index</th>
+    <th scope="col" class="govuk-table__header">Description</th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="RTW/checker-start">Start page</a></th>
+    <td class="govuk-table__cell">Existing screen</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="RTW/brc-brp-notice">BRC/BRP notice</a></th>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">New</strong> Addition of BRC/BRP notice</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="RTW/enter-sharecode">Enter shade code</a></th>
+    <td class="govuk-table__cell">Existing screen</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="RTW/enter-DOB">Enter DOB</a></th>
+    <td class="govuk-table__cell">Existing screen</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="RTW/enter-company">Enter company</a></th>
+    <td class="govuk-table__cell">Existing screen</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="RTW/sportsperson-checker">Profile</a></th>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">New</strong> Addition of "check another job applicant" CTA</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+</div>
+</div>
+</div>
+
+
+
+      {% endblock %}

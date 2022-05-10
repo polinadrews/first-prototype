@@ -1,0 +1,41 @@
+{% set serviceName = "" %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Research 4.1 S1
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+          Pause for a moment
+          </h1>
+          </legend>
+          {{ govukInsetText({
+            text: "This isn't part of the journey"
+          }) }}
+
+          <p class="govuk-body">Don't worry you haven't done anything wrong.</p>
+
+          <p class="govuk-body">The researcher will ask you a few questions.</p>
+
+
+  </div>
+</div>
+
+{% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

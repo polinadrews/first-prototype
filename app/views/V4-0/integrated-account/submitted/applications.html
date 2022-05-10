@@ -1,0 +1,67 @@
+{% extends "V4-0/_layout-submitted.html" %}
+
+{% set accountActive = "applications" %}
+
+{% block content %}
+
+  <!-- START dashboard -->
+
+
+  <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+	  <h1 class="govuk-heading-l">
+		  Your applications
+      </h1>
+      <h2 class="govuk-heading-m">Recently submitted applications</h2>
+      </div>
+
+  </div>
+
+
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="ho-application">
+          <div class="ho-application-content">
+            <h2 class="govuk-heading-m">{% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %}</h2>
+            <p>
+              <strong>
+                Submitted:
+              </strong>
+               {{ date() }} <a class="govuk-link--no-visited-state" href="../../application/submitted/task-list"> View application</a>
+            </p>
+            <p>
+              <strong>
+                Unique application number:
+              </strong>UAN 3434-5999-5421-9332
+            </p>
+
+            <div class="govuk-button-group">
+              {{ govukButton({
+                  text: "Provide photos",
+                  href: "photo-why"
+                }) }}
+
+                {{ govukButton({
+                    text: "Withdraw",
+                    classes: "govuk-button--secondary secondary-dark",
+                    href: "withdraw-app-why"
+                  }) }}
+            </div>
+
+          </div>
+        </div>
+      <br>
+
+      <h3 class="govuk-heading-m">Choose a different application</h3>
+      <p>Go to GOV.UK and <a href="apply-else-why">apply for something else</a>.</p>
+
+      {% include "includes/help_contact.html" %}
+      </div>
+
+
+      {% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

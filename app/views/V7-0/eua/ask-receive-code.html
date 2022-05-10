@@ -1,0 +1,87 @@
+{% set serviceName = "" %}
+{% extends "layout.html" %}
+
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {{ govukBackLink({
+    href: "javascript: window.history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="" method="post" novalidate="novalidate">
+
+        <span class="govuk-caption-l">Sign in</span>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              How do you want to receive a security code?
+            </h1>
+          </legend>
+          <div id="ask-receive-code-hint" class="govuk-hint">
+            We will send a code to the phone or email address.
+          </div>
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-6">Applicant</p>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ask-receive-code" name="ask-receive-code" type="radio" value="text~phone-code">
+              <label class="govuk-label govuk-radios__label" for="ask-receive-code">
+                Send me a text message (SMS) to 07765***408
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ask-receive-code-2" name="ask-receive-code" type="radio" value="email~email-code">
+              <label class="govuk-label govuk-radios__label" for="ask-receive-code-2">
+                Send me an email to g******h@email.com
+              </label>
+            </div>
+          </div>
+          {% if (data['secondary'] == "has-helper") %}
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-6">Helper</p>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ask-receive-code-3" name="ask-receive-code" type="radio" value="text-helper">
+              <label class="govuk-label govuk-radios__label" for="ask-receive-code-3">
+                Send me a text message (SMS) to 07732***301
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ask-receive-code-3" name="ask-receive-code" type="radio" value="email-helper">
+              <label class="govuk-label govuk-radios__label" for="ask-receive-code-4">
+                Send me an email to s***l@gmail.com
+              </label>
+            </div>
+          </div>
+          {% endif %}
+
+        </fieldset>
+      </div>
+
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      <h2 class="govuk-heading-s">
+        Problems signing in
+      </h2>
+      <p>If you no longer have access to your phone and email, <a href="https://update-your-details.homeoffice.gov.uk/account-recovery/help">recover your account</a>.</p>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

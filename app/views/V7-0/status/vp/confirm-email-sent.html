@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+View and prove your immigration status
+{% endblock %}
+
+{% set serviceName %}
+View and prove your immigration status
+{% endset %}
+
+{% block beforeContent %}
+
+{% include "includes/phase_banner_beta.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation" style="background:#00703c">
+      <h1 class="govuk-panel__title">
+        Email sent
+      </h1>
+    <div class="govuk-panel__body">
+        <!--<div class="ss-body-panel">-->
+
+
+        We have sent an email to<br><strong>{{ data['email'] }}</strong>
+      </div>
+    </div>
+    <br>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk body">Contact the person checking your email to ensure thet have all the information they need.</p>
+        <p>To view your status, they must:</p>
+
+        <ul class="number-list-group">
+
+         <li class="govuk-list">
+           <span class="circle number-list-align">1</span>
+           go to <a href="https://www.gov.uk/check-immigration-status">www.gov.uk/check-immigration-status</a>
+         </li>
+
+         <li class="govuk-list">
+          <span class="circle number-list-align">2</span>
+          enter your date of birth
+         </li>
+
+         <li class="govuk-list">
+          <span class="circle number-list-align">3</span>
+          use the share code from this email by 2 August 2022
+         </li>
+
+        </ul>
+
+        <br>
+        <br>
+
+        <p class="govuk body">Get a different share code if you need to prove your status:</p>
+            <ul class="govuk-list govuk-list--bullet">
+               <li><a href="../stepped/RTR-preview">right to rent to a private landlord or letting agent</a></li>
+               <li><a href="../stepped/RTW-preview">right to work</a></li>
+            </ul>
+
+
+        </div>
+    </div>
+      {% endblock %}

@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-890
+{% endblock %}
+
+{% set serviceName %}
+  View a job applicant's right to work
+{% endset %}
+
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+  {% include "includes/backlink.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="sportsperson-checker" method="post" class="form">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  {% set companyHtml %}
+  {{ govukInput({
+    id: "my-company",
+    name: "my-company",
+    type: "text",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+      text: "The company I work for"
+    }
+  }) }}
+  {% endset -%}
+
+  {% set otherHtml %}
+  {{ govukInput({
+    id: "other",
+    name: "other",
+    type: "text",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+      text: "Please enter the name of the company you are doing this check for"
+    }
+  }) }}
+  {% endset -%}
+
+  {{ govukRadios({
+idPrefix: "who",
+name: "who",
+fieldset: {
+legend: {
+  text: "Who are you doing this check for?",
+  isPageHeading: true,
+  classes: "govuk-fieldset__legend--l"
+}
+},
+hint: {
+text: "Select one option."
+},
+items: [
+{
+  value: "my-company",
+  text: "The company I work for"
+},
+{
+  value: "other",
+  text: "On behalf of another company",
+  conditional: {
+    html: otherHtml
+  }
+}
+]
+}) }}
+
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+
+          </div>
+      </div>
+
+      {% endblock %}

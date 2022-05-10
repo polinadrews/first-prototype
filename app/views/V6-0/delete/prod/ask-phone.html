@@ -1,0 +1,61 @@
+{% extends "V5-0/_layout-umd.html" %}
+
+{% set serviceName = "Update your details" %}
+
+
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<form action="verify-phone-update-self" method="post" novalidate>
+
+
+
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <span class="govuk-caption-l">Update my sign in</span>
+  <h1 class="govuk-fieldset__heading">
+    What is your new phone number?
+  </h1>
+</legend>
+<div id="dob-hint" class="govuk-hint">
+                For international numbers include the + symbol with the country code.<br>
+                For example, +39133457090.
+              </div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sign-phone-number">
+  </label>
+  <input class="govuk-input govuk-input--width-20" id="sign-phone-number" name="number" type="tel" autocomplete="tel"></div>
+
+</fieldset>
+
+{{ govukButton({
+text: "Continue"
+}) }}
+
+</form>
+
+{% include "includes/help_contact_4-1.html" %}
+
+</div>
+</div>
+
+{% endblock %}

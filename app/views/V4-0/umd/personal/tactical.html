@@ -1,0 +1,113 @@
+{% extends "layout_umd.html" %}
+{% set serviceName = "Update your details" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Tell us you are updating your personal details</h1>
+
+    {{ govukWarningText({
+      text: "Do not make this change until you have received your status decision.",
+      iconFallbackText: "Warning"
+    }) }}
+    <h2 class="govuk-heading-m">You need to send us your identity document by post</h2>
+
+    <p class="govuk-body">You'll need to:</p>
+    <ol class="govuk-list govuk-list--number">
+      <li>
+        <p class="govuk-body">Download and print the file <a href="/public/downloads/update-personal-details-15072021.pdf" class="govuk-link" download="/public/downloads/update-personal-details-15072021.pdf">Change of personal details: cover sheet and checklist (PDF, 136KB)</a></p>
+        <p class="govuk-body">The file includes 2 pages:</p>
+        <ul class="govuk-list--bullet">
+        <li>a checklist for you to keep for reference</li>
+        <li>a cover sheet to send with your new identity document</li>
+        </ul>
+      </li><br>
+
+      <li>Provide 1 original identity document with your new personal details on it. This could be your passport, national identity card, biometric residence card or permit. It must be the original – not a copy.  </li>
+    <br>
+      <li>
+        <p class="govuk-body">Send the new identity document and cover sheet by recorded delivery to:</p>
+        <p class="govuk-body">PO Box 2077<br>
+          Liverpool<br>
+          L69 3YP</p>
+      </li>
+    </ol>
+
+    <h2 class="govuk-heading-m">Before you send us your identity document</h2>
+    <p>We recommend you scan, make a photocopy or take a photo of your identity document, before you send the original to us. This ensures you have the details while your document is with the Home Office. </p>
+    <h2 class="govuk-heading-m">What happens next?</h2>
+
+    <p class="govuk-body">We will use the identity document to update our records, and confirm to you by email if we could make the update, or if there was a problem. </p>
+    <p class="govuk-body">We will return your identity document by recorded delivery as soon as we have checked and confirmed your new details. We will send it to the postal address we have on record for you. If you want us to use a different address, you can write a return address on the cover sheet.</p>
+    <p class="govuk-body">Once we have confirmed your update, you will need to use the new document details when you sign into your UK Visas and Immigration account.</p>
+
+    <p>
+       </p>
+    {{ govukInsetText({
+      html: '<p class="govuk-body">You will need to <a href="../address/which-address">update your postal address</a> if it has changed. We advise you to do this before you send us your identity document.</p>'
+    }) }}
+
+    <h2 class="govuk-heading-m">Document to download</h2>
+
+    <div class="doc">
+      <div class="doc__image">
+        <a aria-hidden="true" class="thumbnail" href="/public/downloads/update-personal-details-15072021.pdf" download="/public/downloads/update-personal-details-15072021.pdf">
+          <img src="/public/images/change-name-PDF.jpg" alt="Image of the change of PDF" />
+        </a>
+      </div>
+      <div id="document" class="doc__details">
+        <ul class="govuk-list">
+          <li>
+            <a href="/public/downloads/update-personal-details-15072021.pdf" class="govuk-link" download="/public/downloads/update-personal-details-15072021.pdf">
+              <h3 class="doc-download">Change of personal details: cover sheet and checklist (PDF, 167KB)</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+    <br>
+    <div class="govuk-button-group">
+    {{ govukButton({
+        text: "Back to account home",
+        href: "../../index"
+      }) }}
+    </div>
+
+  </div>
+</div>
+
+<!-- HELP COMPONENT -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-inset-text blue-inset">
+      Need help? <a class="govuk-link--no-visited-state" href="help">Contact us</a>
+    </div>
+
+  </div>
+</div>
+<!-- END HELP COMPONENT -->
+
+
+{% endblock %}

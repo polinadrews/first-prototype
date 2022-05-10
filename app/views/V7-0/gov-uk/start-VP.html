@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-1044
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Visas and immigration</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">EU, EEA and Commonwealth citizens</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      {% if serviceName %} {{ serviceName }} {% endif %}
+    </h1>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">View your immigration status</h2>
+    <p>If you have a UK Visas and Immigration account you can use this service to check what rights you have in the UK. For example, you can check if you have the right to live, work, rent, or claim benefits.</p>
+
+    <h2 class="govuk-heading-l">Prove your immigration status</h2>
+    <p>Use this service if someone asks you to prove your:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>right to rent</li>
+      <li>right to work</li>
+      <li>immigration status</li>
+    </ul>
+    <p>You might need to prove your immigration status if you apply for:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>benefits</li>
+      <li>tax credits</li>
+      <li>a driving licence</li>
+      <li>social housing</li>
+      <li>a place at school, college, or university</li>
+    </ul>
+    <p>You can give them access to the information they need by creating a share code. Email them the share code and your date of birth.</p>
+
+    <h2 class="govuk-heading-l">Who can use this service</h2>
+    <p>You can use this service if you have a UK Visas and Immigration account.</p>
+    <p>You will have a UK Visas and Immigration (UKVI) account if you applied:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>to the <a target="external" href="https://www.gov.uk/settled-status-eu-citizens-families/applying-for-settled-status">EU Settlement Scheme</a></li>
+      <li>for a visa using the <a target="external" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/941372/6.7031_HO_PBIS_Guidance_Re-Brand_Updates_Application_Final_2_.pdf">ID Check app</a> to
+        scan your identity document on your phone</li>
+    </ul>
+
+    <h2 class="govuk-heading-l">Who cannot use this service</h2>
+    <p>You cannot use this service if you can only prove your immigration status with one of these:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>a vignette in your passport</li>
+      <li>a biometric residence permit or card</li>
+    </ul>
+
+    <p>If you have a biometric residence permit or card, you can use different services to <a target="external" href="https://www.gov.uk/prove-right-to-work">prove your right to work</a> to an employer and to <a target="external"
+        href="https://www.gov.uk/prove-right-to-rent">prove your right to rent</a> to a landlord.</p>
+
+    <h2 class="govuk-heading-l">Sign in to your UK Visas and Immigration account</h2>
+    <p>You need to sign in to your account to view and prove your immigration status.</p>
+    <p>You will need:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the identity document number registered to your account</li>
+      <li>access to the mobile number or email address registered to your account</li>
+    </ul>
+
+
+    <a href="migrant" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
+      Sign in
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+      </svg>
+    </a>
+
+    <h2 class="govuk-heading-l">Before you start</h2>
+    <p>You will be signed out of this service after 30 minutes of inactivity.</p>
+
+    <h2 class="govuk-heading-l">Problems signing in</h2>
+    <p>If you have lost access to your phone number and email address, or have lost your identity document number, <a target="external" href="https://update-your-details.homeoffice.gov.uk/account-recovery/help">contact us to recover your account</a>.
+    </p>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Related content
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="https://www.gov.uk/settled-status-eu-citizens-families">
+              Your immigration status: an introduction for EU, EEA and Swiss citizens
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+{% endblock %}

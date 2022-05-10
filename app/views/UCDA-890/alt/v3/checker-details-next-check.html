@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-890
+{% endblock %}
+
+{% set serviceName %}
+  View a job applicant's right to work
+{% endset %}
+
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+  {% include "includes/backlink.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="enter-sharecode" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Please review your details
+            </h1>
+          </legend>
+          <p>
+            We'll use these to keep a record of your right to work check for audit purposes.
+          </p>
+
+          {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+  {{ govukSummaryList({
+    rows: [
+      {
+        key: {
+          text: "Company name"
+        },
+        value: {
+          text: "test"
+        },
+        actions: {
+          items: [
+            {
+              href: "#",
+              text: "Change",
+              visuallyHiddenText: "name"
+            }
+          ]
+        }
+      },
+      {
+        key: {
+          text: "Check purpose"
+        },
+        value: {
+          text: "On behalf of another company"
+        },
+        actions: {
+          items: [
+            {
+              href: "#",
+              text: "Change",
+              visuallyHiddenText: "date of birth"
+            }
+          ]
+        }
+      }
+    ]
+  }) }}
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+
+          </div>
+      </div>
+
+      {% endblock %}

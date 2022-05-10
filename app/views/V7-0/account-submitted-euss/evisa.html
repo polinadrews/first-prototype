@@ -1,0 +1,149 @@
+{% extends "V7-0/_layout-euss.html" %}
+{% set serviceUrl = "home" %}
+
+{% set accountActive = "evisa" %}
+
+{% block pageTitle %}
+UK Visas and Immigration
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div>
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <h1 class="govuk-heading-l">
+              Your eVisa
+        		</h1>
+
+
+<!-- Status card start -->
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-two-thirds">
+
+                    <table class="govuk-table">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Name</th>
+                            <td class="govuk-table__cell">{% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+                      		  {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+                          </td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">eVisa</th>
+                            <td class="govuk-table__cell">Pre-settled status, also known as limited leave to remain</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Expires</th>
+                            <td class="govuk-table__cell">30 March 2024</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                    <p class="govuk body">To stay in the UK after this date, you will need to apply for leave to remain, such as settled status.</p>
+                    <p class="govuk body">You can apply for settled status once you have lived in the UK for 5 years.
+                    Find out <a href="https://www.gov.uk/settled-status-eu-citizens-families/applying-for-settled-status">how to apply for settled status</a>.</p>
+
+
+
+                  <div class="govuk-inset-text">
+                     If any of the information displayed on your eVisa is incorrect,
+                     <a href="https://www.gov.uk/contact-ukvi-inside-outside-uk/y/inside-the-uk/eu-settlement-scheme-settled-and-pre-settled-status-or-service-provider-from-switzerland-visa-applications">
+                       contact UK Visas and Immigration</a>.
+                  </div>
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-m">Prove your status</h2>
+                     <p class="govuk body">If you need to prove your immigration status to someone, you can do this online with a share code.</p>
+                          <a href="../status/vp/vp-share-code-info">
+                            <button class="govuk-button" data-module="govuk-button">
+                                 Get a share code
+                            </button>
+                          </a>
+               </div>
+             </div>
+           </div>
+              <div class="govuk-grid-column-one-third">
+                <img class="SS-profile-pic-align-right" src="/../../../../public/images/john-doe.png" alt="Your photo" />
+
+              </div>
+                </div>
+
+
+                </div>
+              </div>
+
+          </div>
+  <!-- Status card end -->
+
+    </div>
+  </div>
+
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+      <h2 class="govuk-heading-l">What you can do in the UK</h2>
+
+              <p>Your <a href="https://www.gov.uk/settled-status-eu-citizens-families/what-settled-and-presettled-status-means" class="govuk-link">pre-settled status</a> means you can:</p>
+
+           <ul class="govuk-list govuk-list--bullet">
+             <li>live in the UK</li>
+             <li>work</li>
+             <li>study</li>
+             <li>rent a place to live</li>
+             <li>use the National Health Service (NHS) in a similar way to permanent UK residents</li>
+             <li>access public funds such as benefits and pensions, if you’re eligible for them</li>
+             <li>access a current account with a bank or building society in the UK</li>
+              <li>travel in and out of the UK if you can <a href="#">provide the required documents</a> &ndash; you may not be able to travel or to enter the UK without them</li>
+           </ul>
+
+
+
+                     <h3 class="govuk-heading-m">Legal basis of status</h3>
+
+
+                     <p>  This leave is issued in accordance with the EU exit separation agreements:</p>
+
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>for EU citizens, and the family members of EU citizens or of UK citizens,
+                              this is the Withdrawal Agreement</li>
+                            <li>for EEA European Free Trade Association (EFTA) citizens,
+                            and the family members of EEA EFTA citizens, this is the EEA EFTA Separation Agreement</li>
+                            <li>for Swiss citizens, and the family members of Swiss citizens,
+                              this is the Swiss Citizens’ Rights Agreement</li>
+                          </ul>
+
+        <br>
+        <br>
+
+
+          </div>
+          </div>
+
+                                      <!-- Status card end -->
+
+
+                                      <div style="margin: 0px 0px 30px 0px;">
+
+                                      </div>
+                                      <div class="govuk-grid-row">
+                                    		<div class="govuk-grid-column-two-thirds">
+                                    			{% include "includes/help_contact_4-1.html" %}
+                                    		</div>
+                                        </div>
+
+                                    {% endblock %}

@@ -1,0 +1,68 @@
+{% set serviceName = "" %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Apply to enter or stay in the UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<form action="what-doc-router" method="post" novalidate="novalidate" spellcheck="false">
+  
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+              How can we check your identity document?
+              </h1>
+            </legend>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="id-how-1" name="id-how" type="radio" value="app">
+               <label class="govuk-label govuk-radios__label" for="are-you-in-the-uk-1">
+                 Use the ‘EU Exit: ID Document Check’ iPhone app or Android app
+               </label>
+             </div>
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="id-how-2" name="id-how" type="radio" value="appointment">
+               <label class="govuk-label govuk-radios__label" for="are-you-in-the-uk-2">
+                 Book an appointment to scan my identity document in person
+               </label>
+             </div>
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="id-how-3" name="id-how" type="radio" value="post">
+               <label class="govuk-label govuk-radios__label" for="are-you-in-the-uk-2">
+                 Enter my document details online and send my identity document by post
+               </label>
+             </div>
+           </div>
+
+
+</fieldset>
+</div>
+
+
+
+  <button class="govuk-button">Continue</button>
+</form>
+
+  </div>
+</div>
+
+{% endblock %}

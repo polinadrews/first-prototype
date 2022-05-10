@@ -1,7 +1,21 @@
 const express = require('express')
 const router = express.Router()
 
+
+
 // Add your routes here - above the module.exports line
+
+const radioButtonRedirect = require('radio-button-redirect')
+router.use(radioButtonRedirect)
+
+
+// V6-0 - in folder routing
+router.use('/V6-0', require('./views/V6-0/_routes'));
+
+// V7-0 - in folder routing
+router.use('/V7-0', require('./views/V7-0/_routes'));
+
+
 // Run this code when a form is submitted to 'juggling-balls-answer'
 router.post('/juggling-balls-answer', function (req, res) {
 
@@ -39,7 +53,20 @@ router.post('/juggling-balls-answer', function (req, res) {
       res.redirect('BRP-BRC-comms/euss-why')
     }
 
+})
 
 
+
+
+// add todays date
+router.get('*', function (req, res, next) {
+  res.locals.date = () => {
+    const date = Date.now()
+    const day = new Intl.DateTimeFormat('en', { day: 'numeric' }).format(date);
+    const month = new Intl.DateTimeFormat('en', { month: 'long' }).format(date);
+    const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
+    return `${day} ${month} ${year}`;
+  }
+  next()
 })
 module.exports = router

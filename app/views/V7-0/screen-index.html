@@ -1,0 +1,246 @@
+{% extends "layout.html" %}
+{% set serviceName="" %}
+
+{% block pageTitle %}
+Research 6.0 screen index
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Switching to EU settled status and sharing status
+    </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">Scenarios: Switching from pre-settled to settled status, proving status and identity doc update</p>
+
+      <p class="govuk-body">We want to know if users understand:</p>
+        <ol class="govuk-list govuk-list--number govuk-!-padding-bottom-7">
+          <li>how to switch from pre-settled to settled status, what this journey looks like as part of any account</li>
+          <li>how to share their status from within the account and getting back to the account</li>
+        </ol>
+
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Research setup</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="research-setup">Set up</a>
+        <td class="govuk-table__cell"><p>Personalisation of the user journey for research</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">EUSS product start page (AUK2)</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="auk2/euss-start">Start your application to the EU Settlement scheme</a>
+        <td class="govuk-table__cell"><p>Content changes to test making it clearer how to switch and reducing to one clear CTA</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <br>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Application start (AUK2)</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="apply-settled/prove-id-where">Are you in the UK?</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="apply-settled/prove-id-how">How to prove your identity</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="apply-settled/prove-id-app">Using the EU Exit: ID Document Check app</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <br>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">EU Exit: ID check app</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="https://ukvi-account.invisionapp.com/console/share/5BUYKJTNRES">App prototype in invision</a>
+        <td class="govuk-table__cell"><p>New screens and testing a sign in process/concept to the app</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <br>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Account - application started</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-started-euss/home">Account home</a>
+        <td class="govuk-table__cell"><p>Changes since last iteration - delete application on home page, order of global nav</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-started-euss/applications">eVisa</a>
+        <td class="govuk-table__cell"><p>Changes - eVisa instead of status, bullet point re. travel documents</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-started-euss/applications">Applications</a>
+        <td class="govuk-table__cell"><p>Changes since last iteration - Content to do with status, deleting app, UAN, version with 2 applications</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-started-euss/personal-information">Manage account</a>
+        <td class="govuk-table__cell"><p>Changes since last iteration - id docs with expiry, trying just 'personal', 'contact', sign in' as sub-nav headers</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-started-euss/task-list">Task list</a>
+        <td class="govuk-table__cell"><p>Changes since last iteration - Wording re cancel and downloading application, status wording</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Account - application submitted</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-submitted-euss/home">Account home</a>
+        <td class="govuk-table__cell"><p>Changes since last iteration - delete application on home page, order of global nav</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-submitted-euss/applications">eVisa</a>
+        <td class="govuk-table__cell"><p>Changes - eVisa instead of status, bullet point re. travel documents</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-submitted-euss/applications">Applications</a>
+        <td class="govuk-table__cell"><p>Changes since last iteration - Content to do with status, deleting app, UAN, version with 2 applications</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-submitted-euss/personal-information">Manage account</a>
+        <td class="govuk-table__cell"><p>Changes since last iteration - id docs with expiry, trying just 'personal', 'contact', sign in' as sub-nav headers</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account-started-euss/task-list">Task list</a>
+        <td class="govuk-table__cell"><p>Changes since last iteration - Wording re cancel and downloading application, status wording</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <!-- Status pages -->
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Status share code pages</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/vp/vp-share-code-info">V&P Share code info</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/share-options">Reasons to share</a>
+        <td class="govuk-table__cell"><p>Production copy - routing users to relevant service depending on their selection</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/rtw/rtw-checker-preview">RTW checker preview</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/rtw/create-share-code">RTW create share code</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/rtw/add-checker-email">RTW add checker email</a>
+        <td class="govuk-table__cell"><p>Production copy - sharing share code with employer</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/vp/vp-checker-preview">V&P checker preview</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/vp/create-share-code">V&P create share code</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/vp/add-checker-email">V&P add checker email</a>
+        <td class="govuk-table__cell"><p>Production copy - sharing share code with employer</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+
+  </div>
+</div>
+
+      {% endblock %}

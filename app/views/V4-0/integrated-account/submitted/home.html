@@ -1,0 +1,73 @@
+{% extends "V4-0/_layout-submitted.html" %}
+{% set accountActive = "home" %}
+
+{% block content %}
+
+  <!-- START dashboard -->
+
+  <div class="govuk-grid-row">
+	  <div class="govuk-grid-column-two-thirds">
+
+	  </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+	  <!-- <div class="govuk-grid-column-one-quarter">
+
+	  <img src="/public/images/profile-pic.png" alt="User icon">
+
+      </div> -->
+
+    <div class="govuk-grid-column-two-thirds">
+
+  	  <span class="govuk-caption-l">Account home</span>
+  	  <h1 class="govuk-heading-l govuk-!-margin-bottom-9">
+
+  		  {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+  		  {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+
+  		</h1>
+
+    </div>
+
+  </div>
+
+
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <section class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">Your applications</h2>
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <p class="govuk-body">You have 1 recently submitted application.</p>
+
+          <p class="govuk-body"><a href="../../integrated-account/submitted/applications">View your applications</a></p>
+        </section>
+
+		  	<section class="govuk-!-margin-bottom-8">
+			  	<h2 class="govuk-heading-m">Manage your account</h2>
+
+			  	<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+			  	<p class="govuk-body">You must keep your details up to date so that you can:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>sign in to your account securely</li>
+            <li>add or remove a helper</li>
+            <li>be contacted by UKVI with a decision</li>
+          </ul>
+
+			  	<p class="govuk-body"><a href="sign-in">Manage your sign in and security details</a>
+<br>
+          <a href="contact-details">Manage your contact details</a></p>
+		  	</section>
+
+        {% include "includes/help_contact.html" %}
+      </div>
+  </div>
+
+{% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

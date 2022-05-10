@@ -1,0 +1,93 @@
+{% extends "layout_umd.html" %}
+{% set serviceName = "Update your details" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="update-self-contact-phone" method="post" novalidate>
+
+    {% if (data['resend-code'] == "contact-phone") %}
+      {{ govukPanel({
+        titleText: "Security code resent",
+        html: "Please wait for new code",
+        classes: "security-code-panel"
+      }) }}
+    {% endif %}
+
+
+    <span class="govuk-caption-l">Update my sign in</span>
+
+      {% call govukFieldset({
+        legend: {
+          text: "Confirm the new phone number",
+          classes: "govuk-fieldset__legend--l",
+          isPageHeading: true
+        }
+      }) %}
+
+        <p>We have sent a 6-digit security code by text message to:</p>
+        <div>
+
+          <p style="display: inline-block;"><strong>
+            {% if (data['sign-phone-number']) %}
+              {% if (data['sign-phone-location'] == "yes") %}
+                +44{{data['sign-phone-number'].split('0').slice(1).join('0')}}
+              {% else %}
+                +{{data['countryCode'].split('+')[1]}}{{data['sign-phone-number']}}
+              {% endif %}
+            {% else%}
+              +447800900811
+            {% endif %}
+          </strong></p>
+          <p style="display: inline-block;">
+            {% if (data['sign-phone-location'] == "no") %}
+            <a href="ask-phone-int">
+            {% else %}
+            <a href="ask-phone-uk">
+            {% endif %}
+              Change <span class="govuk-visually-hidden"> phone number</span></a>
+            </p>
+        </div>
+
+        <p>It may take a few minutes to arrive.</p>
+
+        {{ govukInput({
+          label: {
+            text: "Enter security code",
+            classes: "govuk-label--s"
+          },
+          classes: "govuk-input--width-10"
+        }) }}
+
+        <p><a href="verify-phone-update-contact?resend-code=contact-phone">Resend code</a></p>
+
+        {{ govukButton({
+          text: "Continue",
+          classes: "govuk-!-margin-top-2"
+        }) }}
+
+        <p><a href="problems-phone">My code has not arrived</a></p>
+
+      {% endcall %}
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

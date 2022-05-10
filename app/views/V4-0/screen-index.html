@@ -1,0 +1,206 @@
+{% extends "layout.html" %}
+{% set serviceName="" %}
+
+{% block pageTitle %}
+Prototype - Application Submission Flow
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Research scenario
+    </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">This user has previously created an account and is now returning to apply for a visa.</p>
+
+      <p class="govuk-body">We want to know if they have understood:</p>
+        <ol class="govuk-list govuk-list--number govuk-!-padding-bottom-7">
+          <li>how to leave and return to their account or application</li>
+          <li>what they understand when they go back to their application</li>
+          <li>whether the current state of the application journey within an account makes sense</li>
+              <ul class="govuk-list govuk-list--bullet">
+              <li>What doesn't work?</li>
+              <li>What breaks the user's journey?</li>
+              <li>What is missing?</li>
+              </ul>
+          <li>the link of the task list between the account</li>
+        </ol>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Research set up</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="research-setup">Setting up for research</a>
+              <td class="govuk-table__cell"><p>To capture research participants' name and visa type so that we can tailor their journey.
+              </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Scenario 1: user has created their account but hasn't started their first application yet.</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/not-started/home">Account Home</a>
+        <td class="govuk-table__cell"><p>New account screen. Updated Manage account content.
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="application/not-started/task-list">Task List</a>
+        <td class="govuk-table__cell"><p>The existing screen.
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/not-started/sign-in">Manage Account</a>
+        <td class="govuk-table__cell"><p>New for account - UMD in account, updated content.
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Scenario 2: user has filled in parts of the application - they need to go back and continue.</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/started/home">Account Home</a>
+        <td class="govuk-table__cell"><p>New account screen. Updated Manage account content.
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/started/applications">Your Applications</a>
+        <td class="govuk-table__cell"><p>Existing screen.
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="application/started/task-list">Task list</a>
+        <td class="govuk-table__cell"><p>Existing screen.
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="application/started/declaration">Declaration</a>
+        <td class="govuk-table__cell"><p>Existing screen.
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Scenario 3: user has submitted their application and is waiting for a decision</caption>
+  <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="application/submitted/task-list">Task list</a>
+        <td class="govuk-table__cell"><p>Existing screen.
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/submitted/applications">Your Applications</a>
+        <td class="govuk-table__cell">Existing screen.
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+         <td class="govuk-table__cell"><a href="integrated-account/submitted/home">Account home</a>
+         <td class="govuk-table__cell">New account screen. Updated Manage account content.
+         </td>
+       </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/submitted/contact-details">Contact Details</a>
+        <td class="govuk-table__cell">New for account - UMD in account, updated content.
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/submitted/sign-in">Sign in and security details</a>
+        <td class="govuk-table__cell">New for account - UMD in account, updated content.
+        </td>
+      </tr>
+
+
+      </tbody>
+  </table>
+
+  <br>
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Scenario 4: user has been granted digital status, has no other applications waiting for a decision.</caption>
+  <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/granted/home">Home</a>
+        <td class="govuk-table__cell"><p>New account screen. Updated Manage account content.
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/granted/evisa">eVisa</a>
+        <td class="govuk-table__cell">V&P profile - some content tweaks.
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/granted/applications">Your Applications</a>
+        <td class="govuk-table__cell">As is - submitted/granted.
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/granted/personal-information">Personal information</a>
+        <td class="govuk-table__cell">New for account - UMD in account, updated content.
+        </td>
+      </tr>
+     <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="integrated-account/granted/contact-details">Contact details</a>
+        <td class="govuk-table__cell">New for account - UMD in account, updated content.
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+         <td class="govuk-table__cell"><a href="integrated-account/granted/sign-in">Sign in and security</a>
+         <td class="govuk-table__cell">New for account - UMD in account, updated content.
+         </td>
+       </tr>
+      </tbody>
+  </table>
+
+  </div>
+</div>
+
+      {% endblock %}

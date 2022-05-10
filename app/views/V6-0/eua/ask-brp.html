@@ -1,0 +1,59 @@
+{% set serviceName = "" %}
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="ask-dob-brp" method="post" novalidate>
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-l">Sign in</span>
+              <h1 class="govuk-fieldset__heading">
+                What is your biometric residence card or permit number?
+              </h1>
+            </legend>
+
+            <br>
+
+            <div>
+              <img src="/public/images/brp-with-ref.png" alt="a biometric residence card or permit. The card number is shown in the top right corner.">
+            </div>
+
+              <label class="govuk-label govuk-!-font-weight-bold" for="width-10">
+                Biometric residence card or permit number
+              </label>
+              <span id="event-name-hint" class="govuk-hint">
+                For example, RE1234567
+              </span><br>
+              <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+          </fieldset>
+        </div>
+
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends "V6-0/_layout-expired.html" %}
+{% set accountActive = "evisa" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div>
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <h1 class="govuk-heading-l">
+              Your eVisa
+        		</h1>
+
+
+            <!-- Status card start -->
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-two-thirds">
+
+                    <dl class="govuk-summary-list">
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Name
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+                    		  {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+                        </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          eVisa
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} expired
+                        </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Status
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          <p class="govuk-body">Expired on 8 April 2022</p>
+                        </dd>
+                      </div>
+                    </dl>
+
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <!-- Status card end -->
+
+
+    </div>
+  </div>
+
+
+  <!-- <div class="govuk-grid-row"> -->
+  <!-- <div class="govuk-grid-column-two-thirds-from-desktop"> -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-inset-text">
+        <p>Your permission to be in the UK has expired.</p>
+
+        <p>Contact <a href="https://www.gov.uk/contact-ukvi-inside-outside-uk">UK Visas and Immigration</a> if you
+            think this is wrong.</p>
+      </div>
+
+
+
+            <p>If you are currently in the UK, you can<a href="https://www.gov.uk/return-home-voluntarily"> get help to return home</a>.</p>
+
+
+    </div>
+
+  </div>
+
+      <div style="margin: 0px 0px 30px 0px;">
+
+
+      </div>
+
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+			{% include "includes/help_contact_4-1.html" %}
+		</div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

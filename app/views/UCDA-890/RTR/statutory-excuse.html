@@ -1,0 +1,167 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-889
+{% endblock %}
+
+{% set serviceName %}
+View a tenant's right to rent
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+
+
+
+          <!-- Status card start -->
+
+          <div class="SS-status-card">
+            <div class="SS-status-card_header">
+              <h2 class="govuk-heading-s SS-white">Right to rent</h2>
+            </div>
+            <div class="SS-status-card_body clearfix">
+
+              <div class="SS-threequarter">
+                <div class="SS-status-card__bodyPadding">
+                  <h1 class="govuk-heading-m">Bella-Rose Samantha Wallis</h1>
+                      <p>They have the right to rent.</p>
+                          <h2 class="govuk-heading-s">Details</h2>
+                              <p>There is no limit to how long they can rent for.</p>
+
+
+
+                         <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                               <span class="govuk-details__summary-text">
+                                  Legal basis of status
+                              </span>
+                            </summary>
+                                <div class="govuk-details__text">
+                                  <p>This leave is issued in accordance with the EU exit separation agreements.</p>
+
+                                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                                    <li>for EU citizens, and the family members of EU citizens or of UK citizens, this
+                                     is the Withdrawal Agreement</li>
+                                     <li>for EEA European Free Trade Association (EFTA) citizens,
+                                     and the family members of EEA EFTA citizens, this is the EEA EFTA Separation Agreement
+                                     </li>
+                                     <li>for Swiss citizens, and the family members of Swiss citizens, this is the Swiss Citizens'
+                                     Rights Agreement
+                                     </li>
+                                   </ul>
+
+                                </div>
+                          </details>
+
+                </div>
+              </div>
+              <!--  -->
+              <div class="SS-onequarter">
+                <img class="SS-profile-pic" src="../../../../public/images/bella-rose_wallis.jpg" />
+                <input id="rotateImage" class="button-secondary no-print" aria-label="Rotate profile image" type="button" value="Rotate ↻"></input>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+<br>
+          <!-- Status card end -->
+          <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m">If you rent to this person</h2>
+            <p class="govuk body">To avoid a <a href="https://www.gov.uk/penalties-illegal-renting">penalty</a> you must:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>check this looks like the person you meet face to face</li>
+                <li>keep a secure copy of this check (either electronically or in hard copy), for the duration of the tenancy
+                    and for one year after</li>
+              </ul>
+
+            <p class="govuk body">You don't need to do the check again.</p>
+            <p class="govuk body">Read the <a href="https://www.gov.uk/government/publications/right-to-rent-landlords-code-of-practice">
+                                  landlords' code of practice</a> to find out more about right to rent checks.</p>
+                                  </div>
+                                  </div>
+
+
+                                  <!--start share status and update details  -->
+                                        <div class="govuk-grid-row">
+                                          <div class="govuk-grid-column-full">
+                                            <div class="SS-status-card_header-greybox">
+                                              <br>
+                                              <br>
+                                              <h2 class="govuk-heading-m">Details of check</h2>
+
+                                                <div class="govuk-grid-row">
+                                                  <div class="govuk-grid-column-one-third">
+                                                    <p class="govuk-body govuk-!-margin-bottom-1"><strong>Name of landlord or company</strong></p>
+                                                      <p class="govuk-body">{{ data[ 'contact-by-email' ] }} {{ data[ 'contact-by-phone' ] }} {{ data[ 'contact-by-text' ] }}</p>
+                                                  </div>
+
+                                                  <div class="govuk-grid-column-one-third">
+                                                    <p class="govuk-body govuk-!-margin-bottom-1"><strong>Date of check</strong></p>
+
+                                                      <p class="govuk body">{{ date() }}</p>
+                                                  </div>
+
+                                                  <div class="govuk-grid-column-one-third">
+                                                    <p class="govuk-body govuk-!-margin-bottom-1"><strong>Reference number</strong></p>
+                                                      <p>WE-FZ525W2-JK</p>
+                                                  </div>
+
+
+
+
+                                                </div>
+<br>
+                                            </div>
+                                          </div>
+                                        </div>
+
+
+                                            <!--start share status and update details  -->
+
+                                            <p style="display:inline;margin:0 30px 0 0;"><span class="hod-file-empty side-space icon-medium"></span><a href="#" onclick="window.print()" class="no-print">
+                                             Download PDF
+                                            </a></p>
+
+
+
+          <!-- end start share status and update details -->
+
+        </div>
+
+<br>
+
+<form action="add-share-code2" method="post" class="form">
+        <div class="govuk-button-group">
+
+
+            <button type="submit" class="govuk-button">
+            Check another tenant
+          </button>
+
+
+
+
+
+      <a class="govuk-link" href="start">Finish and leave service</a>
+        </div>
+
+
+      </div>
+    </div>
+
+    {% endblock %}

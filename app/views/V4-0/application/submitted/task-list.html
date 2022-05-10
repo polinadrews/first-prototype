@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+{% set serviceName="" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  href: "../../integrated-account/submitted/applications",
+  text: "Back to Account"
+  }) }}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Apply for a {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} visa
+      </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-7">You need to complete every section.</p>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Identity and contact
+          </h2>
+          <ul class="app-task-list__items">
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Confirm your Identity
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Immigration adviser details
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Contact preferences
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Other names and nationalities
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Prepare application
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              People applying with you
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Your location
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Personal details
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Family and relationships
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Living arrangements
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Travel history
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+               Criminality
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Account security questions
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+             Declaration
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Pay and submit application
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Immigration health surcharge
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Application payment
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Provide evidence
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              Evidence upload
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+
+          </ul>
+        </li>
+
+
+      </ol>
+    </div>
+  </div>
+
+{% endblock %}

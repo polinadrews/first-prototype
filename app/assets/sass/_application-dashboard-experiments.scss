@@ -1,0 +1,46 @@
+.tl-box {
+	margin-bottom: 1rem;
+	border: 1px solid #b1b4b6;
+	background: #f8f8f8;
+
+	.tl-box-heading {
+    padding-top: 1rem;
+		padding-bottom: 0;
+    margin-bottom: 1rem;
+		padding-left: 1rem;
+		border-bottom: 1px solid #b1b4b6;
+		background: #ebebeb;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.tl-box-heading .tl-box-heading__label {
+		float: left;
+		justify-content: start;
+		flex-grow: 1;
+		flex-basis:  | auto;
+	}
+
+	.tl-box-heading .tl-box-heading__actions {
+		float: right;
+		padding-right: 1rem;
+		justify-content: flex-end;
+	}
+
+
+
+  .tl-box-actions {
+    border-top: 1px solid #b1b4b6;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+	.tl-box-content {
+    padding: 1rem;
+  }
+
+
+
+
+}

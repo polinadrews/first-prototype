@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Application Submission Flow
+{% endblock %}
+
+{% set serviceName="" %}
+
+
+{% block beforeContent %}
+  {% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <form action="research-setup-2" method="post" novalidate="novalidate" spellcheck="false">
+
+    <h1 class="govuk-heading-l">
+      Setting up for research
+    </h1>
+
+    <p>This screen is not part of the journey.</p>
+    <p class="govuk-body govuk-!-margin-bottom-7">If you are happy to, we would like to collect your name so that we can personalise the journey that you will be testing a bit more.</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="given-name">
+          Given names
+        </label>
+        <div id="given-name-hint" class="govuk-hint">
+          Your first and middle names
+        </div>
+        <input class="govuk-input govuk-!-width-three-quarters" id="given-name" name="given-name" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="surname">
+            Surname
+          </label>
+          <div id="surname-hint" class="govuk-hint">
+            Include all your surnames
+          </div>
+          <input class="govuk-input govuk-!-width-three-quarters" id="surname" name="surname" type="text"></div>
+
+        {{ govukRadios({
+          idPrefix: "visa-type",
+          name: "visa-type",
+          fieldset: {
+            legend: {
+              text: "Visa type",
+              classes: "govuk-label--s"
+            }
+          },
+          items: [
+            {
+              value: "Skilled Worker",
+              text: "Skilled Worker visa"
+            },
+            {
+              value: "Student",
+              text: "Student visa"
+            }
+          ]
+        }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        </form>
+        </div>
+      </div>
+
+      {% endblock %}

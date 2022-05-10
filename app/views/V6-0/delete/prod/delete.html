@@ -1,0 +1,55 @@
+{% extends "V5-0/_layout-account.html" %}
+{% set accountActive = "home" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+UK Visas and Immigration account
+{% block content %}
+
+  <!-- START dashboard -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="create-account" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                Do you want to delete your application for {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %}?
+                </h1>
+              </legend>
+
+              {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+              {{ govukWarningText({
+                text: "When you click 'delete' your application will be permanently deleted.",
+                iconFallbackText: "Warning"
+              }) }}
+
+
+              {% from "govuk/components/button/macro.njk" import govukButton %}
+
+              <div class="govuk-button-group">
+                {{ govukButton({
+                  text: "Delete",
+                  classes: "govuk-button--warning",
+                  href: "delete-app-why"
+                }) }}
+
+                {{ govukButton({
+                  text: "Cancel",
+                  classes: "govuk-button--secondary",
+                  href: "cancel-app-why"
+                }) }}
+              </div>
+
+            </div>
+
+        </div>
+
+
+
+{% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

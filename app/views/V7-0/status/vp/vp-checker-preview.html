@@ -1,0 +1,127 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+View and prove your immigration status
+{% endblock %}
+
+{% set serviceName %}
+View and prove your immigration status
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+      <div class="govuk-form-group">
+        <div>
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              This is what the checker will see
+            </h1>
+          </legend>
+          <br>
+          <br>
+          <br>
+
+<!-- Status card start -->
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-two-thirds">
+
+
+
+                    <table class="govuk-table">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Name</th>
+                            <td class="govuk-table__cell">{% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+                      		  {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">eVisa</th>
+                            <td class="govuk-table__cell">Pre-settled status, also known as limited leave to remain</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Expires</th>
+                            <td class="govuk-table__cell">30 March 2024</td>
+                        </tr>
+
+                      </tbody>
+                  </table>
+
+                  </div>
+
+                         <div class="govuk-grid-column-one-third">
+
+                            <img class="SS-profile-pic-align-right" src="/../../../../public/images/john-doe.png" alt="Your photo" />
+
+
+                         </div>
+                         </div>
+
+
+                </div>
+              </div>
+
+          </div>
+  <!-- Status card end -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="govuk-grid-row"> -->
+    <!-- <div class="govuk-grid-column-two-thirds-from-desktop"> -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+                     <h3 class="govuk-heading-m">Legal basis of status</h3>
+
+
+                     <p>  This leave is issued in accordance with the EU exit separation agreements:</p>
+
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>for EU citizens, and the family members of EU citizens or of UK citizens,
+                              this is the Withdrawal Agreement</li>
+                            <li>for EEA European Free Trade Association (EFTA) citizens,
+                            and the family members of EEA EFTA citizens, this is the EEA EFTA Separation Agreement</li>
+                            <li>for Swiss citizens, and the family members of Swiss citizens,
+                              this is the Swiss Citizens’ Rights Agreement</li>
+                          </ul>
+
+        <br>
+        <br>
+
+        <a href="create-share-code">
+          <button class="govuk-button" data-module="govuk-button">
+              Create share code
+          </button>
+        </a>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

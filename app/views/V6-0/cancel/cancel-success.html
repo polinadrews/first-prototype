@@ -1,0 +1,43 @@
+{% extends "V6-0/_layout_task-list.html" %}
+
+{% set serviceUrl= "/V6-0/cancel/home" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="home-cancelled" method="post" class="form">
+    <h1 class="govuk-heading-l">Your {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} application has been successfully cancelled.</h1>
+
+    <h2 class="govuk-heading-s">What happens next</h2>
+      <p class="govuk-body">We have sent you a confirmation email.</p>
+
+      <p class="govuk-body">We will refund you the Immigration Health Surcharge fee if you have paid it.</p>
+
+
+
+      <div class="govuk-button-group">
+     <button class="govuk-button" data-module="govuk-button">
+       Continue
+     </button>
+
+
+     </div>
+
+    </div>
+  </div>
+
+
+{% endblock %}

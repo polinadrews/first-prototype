@@ -1,0 +1,72 @@
+{% extends "V4-0/_layout-not-started.html" %}
+{% set accountActive = "applications" %}
+
+{% block content %}
+
+  <!-- START dashboard -->
+
+
+  <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+	  <h1 class="govuk-heading-l">
+		  Your applications
+      </div>
+
+  </div>
+
+
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="ho-application">
+          <div class="ho-application-content">
+            <h2 class="govuk-heading-m">{% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %}</h2>
+            <p>
+              <strong>
+                Started:
+              </strong>
+               {{ date() }}<a class="govuk-link--no-visited-state" href="view-app-why"> View application</a>
+            </p>
+            <p>
+              <strong>
+                Unique application number:
+              </strong>UAN 3434-5999-5421-9332
+            </p>
+                  <div>
+                      <div class="govuk-button-group">
+                        <a href="../application/task-list">
+                            <button class="govuk-button" data-module="govuk-button">
+                              Continue application
+                            </button></a>
+
+                       <a href="delete-app-why">
+                            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                              Delete
+                            </button></a>
+                      </div>
+                  </div>
+
+        <!--    <div class="govuk-button-group" style="margin-bottom: -15px;">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue application
+              </button>
+              <button class="govuk-button govuk-button--secondary" style="background-color: #dee0e2;" data-module="govuk-button">
+                Delete
+              </button>
+            </div>-->
+          </div>
+        </div>
+      <br>
+
+      <h3 class="govuk-heading-m">Choose a different application</h3>
+      <p>Go to GOV.UK and <a href="apply-else-why">apply for something else</a>.</p>
+
+      {% include "includes/help_contact.html" %}
+      </div>
+
+
+      {% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

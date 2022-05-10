@@ -1,0 +1,57 @@
+{% set serviceName = "" %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Apply to enter or stay in the UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">How you prove your identity</h1>
+
+      <p>To help us confirm your identity and nationality, we need to check your identity document.</p>
+
+      <p>You can:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>use the 'EU Exit: ID Document Check' iPhone app or Android app on your phone or someone else's</li>
+        <li>book an appointment to <a href="https://www.gov.uk/id-scan-eu-settlement-scheme" target="_blank">scan your identity document in person</a></li>
+        <li>enter your document details online and send your identity document by post</li>
+      </ul>
+
+      <p>If you send your identity document by post, we will return it by Royal Mail Signed For 2nd Class delivery.</p>
+
+      <h2 class="govuk-heading-m">After your identity document has been checked</h2>
+
+      <p>Using details from your identity document, we will create your UK Visas and Immigration account and send you a code to access it.</p>
+
+      <p>You will need to sign in to complete your application.</p>
+
+      <p>If your application is successful, you can use your account to <a href="https://www.gov.uk/view-prove-immigration-status" target="_blank">view and prove your immigration status</a>.</p>
+
+      <p>You can complete your application on a computer or any device.</p>
+
+<form action="prove-id-what-doc" method="post" class="form">
+
+  <button class="govuk-button">Continue</button>
+</form>
+
+  </div>
+</div>
+
+{% endblock %}

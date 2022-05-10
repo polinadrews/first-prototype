@@ -1,0 +1,278 @@
+{% extends "layout.html" %}
+{% set serviceName="" %}
+
+{% block pageTitle %}
+Research 6.0 screen index
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Research scenarios
+    </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">Visa decisions, cancellation/deletion and withdrawals</p>
+
+      <p class="govuk-body">We want to know if users understand:</p>
+        <ol class="govuk-list govuk-list--number govuk-!-padding-bottom-7">
+          <li>what consequences cancelling (withdrawing) their application has</li>
+          <li>the meaning of the negative status outcomes and what they can do next</li>
+          <li>testing the existing journey</li>
+              <ul class="govuk-list govuk-list--bullet">
+              <li>What doesn't work?</li>
+              <li>What breaks the user's journey?</li>
+              <li>What is missing?</li>
+              </ul>
+        </ol>
+
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Research setup</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="research-setup">Set up 1</a>
+        <td class="govuk-table__cell"><p>Personalisation of the user journey for research</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="research-setup-2">Set up 2</a>
+        <td class="govuk-table__cell"><p>Personalisation of the user journey for research</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Starting points</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="gov-uk/student">GOV.UK - Student</a>
+        <td class="govuk-table__cell"><p>Production copy of GOV.UK start page</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="gov-uk/skilled-worker">GOV.UK - Skilled Worker</a>
+        <td class="govuk-table__cell"><p>Production copy of GOV.UK start page</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="eua/ask-document">Sign in</a>
+        <td class="govuk-table__cell"><p>Production copy (default - Student visa)</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <br>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Cancelling an application (withdraw)</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/home">Account Home</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/applications">Application</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/contact-details">Manage account (contact details)</a>
+        <td class="govuk-table__cell"><p>Latest design</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/task-list/task-list">Task list</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/cancel-warning">Cancelling your application</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/cancel">Why do you want to cancel your application?</a>
+        <td class="govuk-table__cell"><p>Redesign</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/cancel-confirm">Are you sure you want to cancel?</a>
+        <td class="govuk-table__cell"><p>Redesign</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/cancel-success">Your Student application has been successfully cancelled</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/home-cancelled">Account Home</a>
+        <td class="govuk-table__cell"><p>New - cancelled 1st application</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/applications-withdrawn">Application</a>
+        <td class="govuk-table__cell"><p>Redesign - cancelled 1st application</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="cancel/contact-details-withdrawn">Manage account</a>
+        <td class="govuk-table__cell"><p>Latest iteration</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <br>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Immigration status expired</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/expired/home">Account home</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/expired/eVisa">eVisa</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/expired/personal-information">Manage account</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/expired/applications">Application</a>
+        <td class="govuk-table__cell"><p>Redesign</p>
+        </td>
+      </tr>
+
+      </tbody>
+  </table>
+
+  <br>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Application refused</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/refused/home">Account home</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/refused/applications">Application</a>
+        <td class="govuk-table__cell"><p>Redesign</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/refused/contact-details">Manage account</a>
+        <td class="govuk-table__cell"><p>Latest design</p>
+        </td>
+      </tr>
+
+      </tbody>
+  </table>
+
+  <br>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Immigration status curtailed</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/curtailed/home">Account home</a>
+        <td class="govuk-table__cell"><p>New</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/curtailed/eVisa">eVisa</a>
+        <td class="govuk-table__cell"><p>Latest design</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/curtailed/personal-information">Manage account</a> (personal details)
+        <td class="govuk-table__cell"><p>Latest design</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="outcomes/curtailed/applications">Application</a>
+        <td class="govuk-table__cell"><p>Redesign</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="umd/contact/ask-phone">What is your new phone number?</a> (contact)
+        <td class="govuk-table__cell"><p>Header service name change</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="umd/contact/verify-phone-update-contact">Confirm your new phone number</a> (contact)
+        <td class="govuk-table__cell"><p>Header service name change</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="umd/contact/also-want-update">Do you also want to update your sign in phone number?</a> (contact)
+        <td class="govuk-table__cell"><p>Header service name change</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="umd/contact/confirmation-update-contact-phone">Confirmation page</a> (contact)
+        <td class="govuk-table__cell"><p>Header service name change, CTA back to account</p>
+        </td>
+      </tr>
+
+      </tbody>
+  </table>
+
+
+  </div>
+</div>
+
+      {% endblock %}

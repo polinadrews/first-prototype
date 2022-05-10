@@ -1,0 +1,219 @@
+{% extends "V4-0/_layout-granted.html" %}
+{% set accountActive = "evisa" %}
+
+
+
+{% block content %}
+
+<style>
+	.govuk-panel {
+		border: 3px solid #F3F2F1;
+		text-align: left;
+		margin-bottom: 30px;
+	}
+	.govuk-panel .govuk-table {
+		margin-bottom: 0;
+	}
+	.govuk-panel .govuk-table__cell {
+		border-bottom: none;
+	}
+
+	.govuk-panel .govuk-button {
+		margin-bottom: 0.3em
+	}
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  	  <h1 class="govuk-heading-l">
+        Your eVisa
+  		</h1>
+  </div>
+</div>
+
+<!--fbis-skilled worker-->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+
+          <br>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+
+                  <dl class="govuk-summary-list">
+                      <div class="govuk-summary-list__row">
+                       <dt class="govuk-summary-list__key">
+                         Name
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+												 {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+								   		  {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+                       </dd>
+                      </div>
+                      <div class="govuk-summary-list__row">
+                       <dt class="govuk-summary-list__key">
+                         eVisa
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %}
+                       </dd>
+                      </div>
+                      <div class="govuk-summary-list__row">
+                       <dt class="govuk-summary-list__key">
+                         Valid from
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         {{ date() }}
+                       </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row">
+                       <dt class="govuk-summary-list__key">
+                         Valid until
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                        13 June 2024
+                       </dd>
+                      </div>
+                      </dl>
+
+
+                </div>
+
+                    <div class="govuk-grid-column-one-third">
+                      <img class="SS-profile-pic-align-right" src="../../../../public/images/john-doe.png"
+                        alt="Your photo" />
+                        <!-- <input id="rotateImage" class="button-secondary no-print" aria-label="Rotate profile image" type="button" value="Rotate ↻"></input> -->
+                    </div>
+              </div>
+              <h2 class="govuk-heading-m">Prove your status</h2>
+                <p class="govuk-body">If you need to prove your immigration status to someone, you can do this online.</p>
+
+              <a href='share-why'>
+                 <button class="govuk-button" data-module="govuk-button">
+                   Prove your status
+                 </button>
+              </a>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row  govuk-!-margin-top-8" id="can-do-in-uk">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">What you can do in the UK</h2>
+		{% if (data['visa-type'] == "British National (Overseas)") %}
+	      <p>As a <a href="visa-why" class="govuk-link">British National (Overseas) status holder,</a> you can:</p>
+				<ul class="govuk-list govuk-list--bullet">
+					<li>work</li>
+					<li>study</li>
+					<li>rent somewhere to live</li>
+					<li>use the <a href="nhs-why" class="govuk-link">National Health Service (NHS)</a> in a similar way to permanent UK residents</li>
+					<li>access a current account with a bank or building society in the UK</li>
+					<li>travel in and out of the country without having to prove your status, as your information will be checked automatically</li>
+				</ul>
+		{% else %}
+				<p>As a <a href="visa-why" class="govuk-link">student,</a> you can:</p>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>study, in line with the conditions listed in the decision (or grant) notice you received from UK Visas and Immigration</li>
+						<li>rent somewhere to live</li>
+						<li>use the NHS in a similar way to permanent UK residents</li>
+						<li>acccess a current account with a bank or building society in the UK</li>
+					</ul>
+					<p>You can also:</p>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>work up to 10 hours a week during term-time</li>
+						<li>work full-time during the holidays</li>
+					</ul>
+				<p>You must share proof of your term dates with your employer.</p>
+				<p>You can also work on a placement which is part of the course your student visa is based on. The work placement must be:</p>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>a compulsary part of your couse</li>
+						<li>assessed as part of your couse</li>
+					</ul>
+				<p>Read more about <a href="volunteer-why" class="govuk-link">volunteering, working for a student union and other types of work</a>.</p>
+				<p>You may be able to bring in <a href="spouse-why" class="govuk-link">your spouse or partner, as well as children</a> aged under 18 who depend on you for care.</p>
+		{% endif %}
+
+
+    <h3 class="govuk-heading-m">Things you cannot do</h3>
+
+      <p class="govuk body">You cannot:</p>
+
+			{% if (data['visa-type'] == "British National (Overseas)") %}
+			<ul class="govuk-list govuk-list--bullet">
+				<li>get <a href="https://www.gov.uk/government/publications/public-funds--2">public funds</a></li>
+				<li>work as a professional sportsperson or coach</li>
+			</ul>
+			{% else %}
+				<ul class="govuk-list govuk-list--bullet">
+					<li>study at an academy or state school</li>
+					<li>work as an entertainer</li>
+					<li>run a business or be self-employed unless you have applied for a start-up visa</li>
+					<li>get <a href="https://www.gov.uk/government/publications/public-funds--2">public funds</a></li>
+					<li>work as a professional sportsperson or coach</li>
+				</ul>
+			{% endif %}
+
+			<h3 class="govuk-heading-m">Legal basis of stay</h3>
+			{% if (data['visa-type'] == "British National (Overseas)") %}
+				<p class="govuk body">You have been granted permission to stay in the UK (also known as leave to remain) until the expiry date.</p>
+			{% else %}
+				<p class="govuk body">You have been granted permission to stay in the UK (also known as leave to remain) until the expiry date.</p>
+			{% endif %}
+
+			<h2 class="govuk-heading-l">Register with the police</h2>
+			<p class="govuk body">You must register with the police within 7 days of you:</p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>arriving in the UK if you applied for a visa from outside the UK</li>
+				<li>being notified of your new status if you were already in the UK when you applied</li>
+			</ul>
+
+			<p>
+				Even if you have previously registered, you must do so again. You must take your decision notice with you.
+				Visit <a href="https://www.gov.uk/register-with-the-police">UK visas and registering with the police</a> for information on where to go, what other documents to take and how to report
+				any change to your circumstances.
+			</p>
+
+			<h2 class="govuk-heading-l">If your personal details change</h2>
+			 <p class="govuk-body">You must tell us about any changes to your personal details, such as your name or nationality. You should also tell us if your sign-in or travel document details change, so that you can continue to access your information online.</p>
+
+			 <p>You can <a href="personal-information">use manage account</a> to tell us about changes to your:
+					<ul class="govuk-list govuk-list--bullet">
+						<li>email address</li>
+						<li>phone number</li>
+						 <li>home address</li>
+						<li>passport or travel document details, including change of name or nationality</li>
+					</ul>
+
+  </div>
+	</div>
+
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+				<div class="govuk-inset-text">
+					If any of the information displayed on your eVisa is incorrect, contact <a href="https://www.gov.uk/contact-ukvi-inside-outside-uk" class="govuk-link">UK Visas and Immigration</a>.
+				</div>
+			</div>
+	</div>
+	<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+					{% include "includes/help_contact.html" %}
+			</div>
+	</div>
+
+
+
+
+
+
+		{% include "includes/phase_banner_bottom.html" %}
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prove your right to work
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Share your status with someone
+    </h1>
+
+
+
+    <form action="confirm-checker-email" method="post" class="form">
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email">
+        Their email address
+      </label>
+      <div class="email-container">
+        <div class="email-input">
+          <input class="govuk-input" style="margin:20px 0 0 0" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+        </div>
+      </div>
+
+
+<br><br>
+<button type="submit" class="govuk-button">
+Continue
+</button>
+
+
+    </div>
+
+    <p><a href="other-why">I don't know their email address</a></p>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

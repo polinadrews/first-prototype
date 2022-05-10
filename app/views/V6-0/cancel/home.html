@@ -1,0 +1,86 @@
+{% extends "V6-0/_layout-submitted.html" %}
+
+{% set accountActive = "home" %}
+{% set bannerNotificationVisa = "application-id-evidence" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+UK Visas and Immigration account
+{% block content %}
+
+
+
+  <!-- START dashboard -->
+
+{% include "includes/banner-notifications-visa.html" %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  	  <span class="govuk-caption-l">Account home</span>
+  	  <h1 class="govuk-heading-l govuk-!-margin-bottom-9">
+
+  		  {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+  		  {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+
+  		</h1>
+
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
+
+       <section class="govuk-!-margin-bottom-8">
+         <h2 class="govuk-heading-m">Your application</h2>
+
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+         <p class="govuk-body govuk-!-margin-bottom-3">You have submitted your {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} visa application.</p>
+         <p class="govuk-body">
+           Unique application number:
+           UAN 3434-5999-5421-9332
+         </p>
+
+
+         <div class="govuk-button-group">
+           {{ govukButton({
+             text: "Provide requested evidence and photos",
+             href: "provide-why"
+           }) }}
+
+           <a class="govuk-link" href="task-list/task-list">View your application</a>
+         </div>
+
+
+        </section>
+
+		  	<section class="govuk-!-margin-bottom-8">
+			  	<h2 class="govuk-heading-m">Manage your account</h2>
+
+			  	<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+			  	  <p class="govuk-body">You must keep your details up to date so that you can:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>be contacted by us &ndash; for example, about your immigration status </li>
+                <li>sign in to your account securely</li>
+                <li>manage who can access your account to help with your application</li>
+              </ul>
+
+              <ul class="govuk-list govuk-list--spaced">
+                <li><a href="sign-in">Manage your sign in details</a></li>
+  			  	    <li><a href="contact-details">Manage your contact details</a></li>
+              </ul>
+		  	</section>
+
+        {% include "includes/help_contact_4-1.html" %}
+      </div>
+  </div>
+
+{% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

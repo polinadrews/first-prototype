@@ -1,0 +1,62 @@
+
+// Custom styles for side (desktop) sub sav
+
+.account-side-navigation {
+  display: block;
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+  @include govuk-media-query($until: tablet) {
+    margin-top: 2em;
+  }
+}
+
+
+.account-side-navigation__list {
+  // If two words stack:
+  // display: flex;
+
+  // if flow underneath
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  box-shadow: inset 0 -1px 0 #b1b4b6;
+  @include govuk-media-query($from: tablet) {
+    display: block;
+    box-shadow: none;
+  }
+}
+
+.account-side-navigation__item {
+  display: inline-block;
+  margin-right: 20px;
+  padding-bottom: 0.5em;
+  padding-top: 1.1em;
+  @include govuk-media-query($from: tablet) {
+    display: block;
+    padding-top: 0.75em;
+    padding-left: 0.5em;
+    padding-bottom: 0.75em;
+  }
+}
+
+.account-side-navigation__item--active {
+  border-bottom: 4px solid govuk-colour("blue");
+  @include govuk-media-query($from: tablet) {
+    border-bottom: none;
+    border-left: 4px solid govuk-colour("blue");
+    background-color: govuk-colour("light-grey");
+  }
+  .account-side-nav__link {
+    font-weight: 700;
+  }
+}
+
+.account-side-navigation__item--active {
+  .account-side-nav__link--no-underline {
+    text-decoration: none;
+  }
+}
+
+.account-side-nav__link--no-underline:not(:hover):not(:active) {
+    text-decoration: none;
+}

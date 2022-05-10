@@ -1,0 +1,94 @@
+{% extends "V5-0/_layout-account.html" %}
+{% set accountActive = "home" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+UK Visas and Immigration account
+{% block content %}
+
+  <!-- START dashboard -->
+
+  <div class="govuk-grid-row">
+	  <div class="govuk-grid-column-two-thirds">
+
+	  </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+	  <!-- <div class="govuk-grid-column-one-quarter">
+
+	  <img src="/public/images/profile-pic.png" alt="User icon">
+
+      </div> -->
+
+    <div class="govuk-grid-column-two-thirds">
+
+  	  <span class="govuk-caption-l">Account home</span>
+  	  <h1 class="govuk-heading-l govuk-!-margin-bottom-9">
+
+  		  {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+  		  {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+
+  		</h1>
+
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
+
+       <section class="govuk-!-margin-bottom-8">
+         <h2 class="govuk-heading-m">Your application</h2>
+
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+         <p class="govuk-body govuk-!-margin-bottom-3">You have started your {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} visa application.</p>
+         <p class="govuk-body">
+           Unique application number:
+           UAN 3434-5999-5421-9332
+         </p>
+
+         <!-- <p class="govuk-body">
+           <a href="task-list">
+             <button class="govuk-button" data-module="govuk-button">
+              Continue your application
+             </button>
+           </a>
+         </p> -->
+
+       <div class="govuk-button-group">
+         {{ govukButton({
+           text: "Continue your application",
+           href: "task-list"
+         }) }}
+
+         <a class="govuk-link" href="cancel-app-why">Cancel</a>
+       </div>
+
+        </section>
+
+		  	<section class="govuk-!-margin-bottom-8">
+			  	<h2 class="govuk-heading-m">Manage your account</h2>
+
+			  	<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+			  	  <p class="govuk-body">You must keep your details up to date so that you can:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>sign in to your account securely</li>
+                <li>manage who can access your account to help with your application</li>
+              </ul>
+
+			  	  <p class="govuk-body"><a href="sign-in">Manage your sign in details</a></p>
+		  	</section>
+
+        {% include "includes/help_contact_4-1.html" %}
+      </div>
+  </div>
+
+{% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

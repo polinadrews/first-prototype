@@ -1,0 +1,39 @@
+{% extends "layout_umd.html" %}
+{% set serviceName = "Update your details" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Update a contact</span>
+    <h1 class="govuk-heading-l">
+      Before you continue
+    </h1>
+
+    <p>We will send a confirmation code to the new contact phone number. You need to have access to this phone number to get the code.</p>
+
+    {{ govukButton({
+      text: "Confirm and continue",
+      href: "phone-location",
+      classes: "govuk-!-margin-top-2"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

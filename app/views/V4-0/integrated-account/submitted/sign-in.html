@@ -1,0 +1,169 @@
+{% extends "V4-0/_layout-submitted.html" %}
+{% set accountActive = "manage" %}
+
+{% block content %}
+
+  <!-- START dashboard -->
+
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Manage account</span>
+      <h1 class="govuk-heading-l">
+
+        {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+        {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+
+      </h1>
+
+      </div>
+  </div>
+
+
+
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
+
+        {{ mojSubNavigation({
+          label: 'Sub navigation',
+          items: [{
+            text: 'Contact details',
+            href: 'contact-details'
+}, {
+            text: 'Sign in and security',
+            href: 'sign-in-after',
+            active: true
+          }]
+        }) }}
+
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-padding-bottom-8">
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Sign in details</h2>
+      <p class="govuk-body">You sign in with the details of the latest identity document you added to your account.</p>
+<br>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" style="padding-bottom: 0;">
+          Document type
+        </dt>
+        <dd class="govuk-summary-list__value" style="padding-bottom: 0;">
+          Passport
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row ">
+        <dt class="govuk-summary-list__key" style="padding-top: 0;">
+          Document number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {% if data['brp-number'] %}{{ data['brp-number'] }}{% else %}RAX203829{% endif %}
+        </dd>
+      </div>
+    </dl>
+
+
+    </div>
+
+    <div class="govuk-!-padding-bottom-1">
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Account security</h2>
+      <p class="govuk-body">These are the phone number and email we send security codes to when you sign in.</p>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Your details</h3>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['email-address'] %}{{ data['email-address'] }}{% else %}butterfly22@gmail.com{% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="update-email-why">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Text message
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['number'] %}{{ data['number'] }}{% else %}+447800900811{% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="update-phone-why">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+
+      <div class="govuk-!-padding-bottom-6">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Your helper's details</h3>
+        <p class="govuk-body">This is where we send security codes to, when your helper signs in with your identity document number and date of birth.</p>
+        <!-- <p class="govuk-body">They can see and edit your application, but cannot manage your account. If their details change you need to update them.</p> -->
+
+        {{ govukDetails({
+          summaryText: "What a helper can do",
+          text: "They can see and edit your application, but cannot manage your account. If their details change you need to update them."
+        }) }}
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email
+            </dt>
+            <dd class="govuk-summary-list__value">
+              ••••••••••••••••••••••••••
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Show<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/dead-ends/not-in-prototype">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Text message
+            </dt>
+            <dd class="govuk-summary-list__value">
+              •••••••••••••
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Show<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/dead-ends/not-in-prototype">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <div class="govuk-!-padding-bottom-6">
+          <p><a href="/dead-ends/not-in-prototype" class="govuk-link" style="float:right">Remove helper</a></p>
+          </div>
+      </div>
+
+    {% include "includes/help_contact.html" %}
+  </div>
+  </div>
+
+  {% include "includes/phase_banner_bottom.html" %}
+
+
+
+{% endblock %}

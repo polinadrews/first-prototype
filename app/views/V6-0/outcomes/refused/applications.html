@@ -1,0 +1,66 @@
+{% extends "V6-0/_layout-refused.html" %}
+
+{% set accountActive = "applications" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+
+{% block content %}
+
+  <!-- START dashboard -->
+
+
+  <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+	  <h1 class="govuk-heading-l">
+		  Your application
+      </h1>
+
+      </div>
+
+  </div>
+
+
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="ho-application">
+          <div class="ho-application-content">
+            <h2 class="govuk-heading-m">{% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} visa</h2>
+
+            <p class="govuk-body govuk-!-margin-bottom-1">
+              <strong>
+                Unique application number:
+              </strong>UAN 3434-5999-5421-9332
+            </p>
+
+            <p class="govuk-body govuk-!-margin-bottom-4">
+            <strong>
+              Status:
+              </strong> Refused
+              <br>
+          </p>
+          <p>
+            Your application was refused on {{ date() }}.</p>
+            <p class="govuk-body govuk-!-margin-bottom-4">
+            We have sent you an email or letter that explains
+            what you need to do next, including information on whether you have the right to stay in the UK.
+            </p>
+            <p><a class="govuk-link--no-visited-state" href="../download-why">Download a copy of this application</a></p>
+
+
+          </div>
+        </div>
+
+
+
+        {% include "includes/help_contact_4-1.html" %}
+      </div>
+
+
+      {% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

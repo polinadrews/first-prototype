@@ -1,0 +1,64 @@
+{% extends "layout_umd.html" %}
+{% set serviceName = "Update your details" %}
+
+
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<form action="update-contact-sign-in-phone" method="post" novalidate>
+
+<h1 class="govuk-heading-l">Problems getting security codes to your phone</h1>
+
+<p>There are different reasons why our text message may not arrive, for example:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>a temporary problem with the phone network</li>
+  <li>poor mobile signal</li>
+  <li>the settings on your phone</li>
+</ul>
+
+<p>What you can try:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>check that you have good mobile reception</li>
+  <li>make sure you have not enabled flight mode on your phone</li>
+  <li>restart your phone</li>
+  <li>check that your number is correct - <a href="ask-phone-update-contact">try entering your phone number again</a></li>
+</ul>
+
+
+<h2 class="govuk-heading-m">Continue without a code</h2>
+<p>You can continue without entering the code.</p>
+
+
+{{ govukButton({
+text: "Continue"
+}) }}
+
+</form>
+
+<div class="govuk-inset-text blue-inset">
+Need help? <a class="govuk-link--no-visited-state" href="/v1/detached/help">Contact us</a>
+</div>
+
+</div>
+</div>
+
+{% endblock %}

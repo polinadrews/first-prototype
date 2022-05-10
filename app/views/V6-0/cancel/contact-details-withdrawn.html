@@ -1,0 +1,126 @@
+{% extends "V6-0/_layout-withdrawn.html" %}
+{% set accountActive = "manage" %}
+{% set bannerNotificationVisa = "application-id-evidence" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Manage account</span>
+      <h1 class="govuk-heading-l">
+
+        {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+        {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+
+      </h1>
+
+      </div>
+  </div>
+
+
+
+  {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+
+            {{ mojSideNavigation({
+              label: 'Side navigation',
+              items: [{
+                text: 'Contact details',
+                href: 'contact-details',
+                active: true
+              },{
+                text: 'Sign in details',
+                href: 'sign-in-withdrawn'
+              }]
+            }) }}
+
+    </div>
+
+
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m govuk-!-padding-top-3">Your contact details</h2>
+      <p class="govuk-body">We use these details if we need to contact you. Your phone and email can be different from your <a href="sign-in-withdrawn">sign in details</a>.</p>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if (data['contact-phone-number']) %}
+              {% if (data['contact-phone-location'] == "yes") %}
+                +44{{data['contact-phone-number'].split('0').slice(1).join('0')}}
+              {% else %}
+                +{{data['countryCode'].split('+')[1]}}{{data['int-contact-phone-number']}}
+              {% endif %}
+            {% else%}
+              +447800900811
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="umd/contact/stop-update-contact-phone">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            butterfly22@gmail.com
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/dead-ends/not-in-prototype">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Postal address
+            <span class="govuk-caption-m">Where we will send letters or documents to.</span>
+          </dt>
+          <dd class="govuk-summary-list__value">
+            68 Greyfriars Road <br> Cardiff <br> CF1 3YQ
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="address/contact/contact-country">
+              Change<span class="govuk-visually-hidden">contact address</span>
+            </a>
+          </dd>
+        </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Home address
+              <span class="govuk-caption-m">Where you live most of the time.</span>
+            </dt>
+            <dd class="govuk-summary-list__value">
+              68 Greyfriars Road <br> Cardiff <br> CF1 3YQ
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="address/home/home-country">
+                Change<span class="govuk-visually-hidden">home address</span>
+              </a>
+            </dd>
+          </div>
+      </dl>
+
+    {% include "includes/help_contact_4-1.html" %}
+  </div>
+</div>
+
+{% include "includes/phase_banner_bottom.html" %}
+
+
+{% endblock %}

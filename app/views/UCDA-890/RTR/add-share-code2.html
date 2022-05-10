@@ -1,0 +1,59 @@
+{% extends "layout-eua.html" %}
+
+{% block pageTitle %}
+UCDA-889
+{% endblock %}
+
+
+{% set serviceName %}
+View a tenant's right to rent
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="add-dob2">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What is the share code?
+            </h1>
+            <br>
+
+          </legend>
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="width-10">
+                Share code
+              </label>
+          <div id="share-code-hint" class="govuk-hint">
+            For example, R1234567G
+          </div>
+          <input class="govuk-input govuk-input--width-10" id="share-code" name="share-code" type="text" spellcheck="false" aria-describedby="share-code-hint">
+        </div>
+        </fieldset>
+
+        <div class="SS-form-spacing">
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div class="govuk-inset-text">
+      <p>The share code is created when the person gives you permission to view their status.</p>
+      <p>Ask them to share the code with you.</p>
+      <p>If you need help using this service, contact <a href="https://www.gov.uk/contact-ukvi-inside-outside-uk">UK Visa and Immigration</a>.</p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

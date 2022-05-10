@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start your application to the EU Settlement Scheme
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Start your application to the EU Settlement Scheme
+      </h1>
+
+
+      <h2 class="govuk-heading-m">Prove your identity</h2>
+
+        <p class="govuk-body">This will be the first step in the application. You will need an email address and a phone number.</p>
+
+        {{ govukWarningText({
+          text: "If you are applying to switch from pre-settled to settled status, you have to make a full application. This includes proving your identity again.",
+          iconFallbackText: "Warning"
+        }) }}
+
+      <h2 class="govuk-heading-m">If you are an EU, EEA or Swiss citizen</h2>
+
+        <p class="govuk-body">You will also need your passport or national identity card.</p>
+        <p class="govuk-body">If you are not in the UK, your national identity card must have a biometric chip.</p>
+        <p class="govuk-body">Check which <a href="https://www.gov.uk/eu-eea">countries are in the European Economic Area (EEA)</a>.</p>
+
+      <h2 class="govuk-heading-m">If you are not an EU, EEA or Swiss citizen</h2>
+
+        <p class="govuk-body">If you are in the UK, you will need to use one of the following:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>passport</li>
+          <li>biometric residence card</li>
+          <li>biometric residence permit</li>
+        </ul>
+
+        <p class="govuk-body">If you are not in the UK, you can only use your biometric residence card.</p>
+
+        <p class="govuk-body">Read the <a href="https://www.gov.uk/settled-status-eu-citizens-families/eligibility?step-by-step-nav=0c79b832-75de-4854-8154-d62774a8dfb8">guidance on staying in the UK after it leaves the EU</a> to check if you qualify.</p>
+
+            <a href="../apply-settled/prove-id-where" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+              Start your application
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+              </svg>
+            </a>
+
+      <h2 class="govuk-heading-m">Continue your application</h2>
+        <p class="govuk-body govuk-!-padding-bottom-4">After you prove your identity online or using the app, <a href="#">sign in to continue your application</a>.</p>
+
+
+      <h2 class="govuk-heading-m">How we use your personal information</h2>
+        <p class="govuk-body">The Home Office will use the personal information you provide to decide whether to grant your application.</p>
+        <p class="govuk-body">In addition to an identity check, the three main ways in which your personal information will be processed are:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>criminality and security checks;</li>
+            <li>if you have provided your National Insurance number, real time checks with the Department for Work and Pensions and
+              HM Revenue and Customs to consider evidence of your residence in the UK (for example tax or benefit records); and</li>
+              <li>on a case by case basis, sharing information with other organisations to verify evidence you have provided within
+                your application to protect against fraud and the use of counterfeit documents (for example verifying with a university
+                that the university certificate you have provided is genuine)</li>
+          </ul>
+
+        <p class="govuk-body">This data sharing is designed to help applicants evidence their status in a quick and straightforward way by using data already held by other Government departments.</p>
+
+        <p class="govuk-body">The Home Office may also, on a case by case basis, process your information in other ways in order to fulfil its legal and official functions. This could include, for example:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>if, in the future, you apply for UK citizenship;</li>
+          <li>if we find evidence a significant crime has been committed;</li>
+            <li>if we discover an immigration offence (like a sham marriage) is being committed; or</li>
+            <li>to allow the Home Office to carry out its safeguarding duties</li>
+        </ul>
+
+
+        <p class="govuk-body">This is set out in more detail in
+          <a href="https://www.gov.uk/government/publications/personal-information-use-in-borders-immigration-and-citizenship">the Borders, Immigration and Citizenship System privacy information notice</a>.
+          The BICS privacy information notice also sets out how you can request a copy of your personal information, and how you can complain.
+          You should be aware that the information set out in this note is intended to supplement the BICS privacy information notice, not to replace it.</p>
+
+
+
+    </div>
+  </div>
+{% endblock %}

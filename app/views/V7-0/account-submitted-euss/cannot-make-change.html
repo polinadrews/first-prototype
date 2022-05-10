@@ -1,0 +1,53 @@
+{% extends "V7-0/_layout_umd.html" %}
+{% set serviceUrl = "home" %}
+
+
+{% set serviceUrl= "/V6-0/cancel/home" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+  <span class="govuk-caption-l">Manage your account</span>
+   <h1 class="govuk-heading-l">You cannot make this change now</h1>
+
+   <p>We are still processing your recent application. You will be able to change your personal information if your application is approved.</p>
+
+   <p>To see how long it should take for your application to be processed, check the <a href="https://www.gov.uk/guidance/visa-decision-waiting-times-applications-inside-the-uk">visa decision waiting times</a>.
+      </p>
+
+      <p>If you think you're seeing this message in error,<a href="https://www.gov.uk/contact-ukvi-inside-outside-uk">contact us for help</a></p>
+
+   {% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+         {{ govukButton({
+      text: "Back to Manage account",
+      classes: "govuk-button--secondary",
+      href: "personal-information"
+      }) }}
+
+  {% include "includes/help_contact_4-1.html" %}
+
+
+
+
+</div>
+  </div>
+
+
+{% endblock %}

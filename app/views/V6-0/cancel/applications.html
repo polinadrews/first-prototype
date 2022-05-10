@@ -1,0 +1,75 @@
+{% extends "V6-0/_layout-submitted.html" %}
+{% set bannerNotificationVisa = "application-id-evidence" %}
+{% set accountActive = "applications" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+
+{% block content %}
+
+
+{% include "includes/banner-notifications-visa.html" %}
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+	  <h1 class="govuk-heading-l">
+		  Your application
+      </h1>
+      </div>
+  </div>
+
+
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="ho-application">
+          <div class="ho-application-content">
+            <h2 class="govuk-heading-m">{% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} visa</h2>
+
+            <p class="govuk-body govuk-!-margin-bottom-1">
+              <strong>
+                Unique application number:
+              </strong>UAN 3434-5999-5421-9332
+            </p>
+
+            <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong>
+              Status:
+            </strong>Waiting for a decision
+            <br>
+            </p>
+            <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong>
+              Submitted:
+              </strong>1 April 2022
+              <br>
+          </p>
+            <br>
+
+            {% from "govuk/components/button/macro.njk" import govukButton %}
+
+              <div class="govuk-button-group">
+                {{ govukButton({
+                  text: "Provide requested evidence and photos",
+                  href: "provide-why"
+                }) }}
+
+                <a class="govuk-link" href="task-list/task-list">View your application</a>
+              </div>
+
+
+
+          </div>
+        </div>
+
+
+
+        {% include "includes/help_contact_4-1.html" %}
+      </div>
+
+
+      {% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

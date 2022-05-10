@@ -1,0 +1,142 @@
+{% extends "V6-0/_layout-curtailed.html" %}
+{% set accountActive = "manage" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Manage account</span>
+    <h1 class="govuk-heading-l">
+
+      {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+      {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+
+    </h1>
+
+  </div>
+</div>
+
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+
+      {{ mojSideNavigation({
+        label: 'Side navigation',
+        items: [{
+          text: 'Personal information',
+          href: 'personal-information',
+          active: true
+        },{
+          text: 'Contact details',
+          href: 'contact-details'
+        },{
+          text: 'Sign in details',
+          href: 'sign-in'
+
+        }]
+      }) }}
+
+    </div>
+
+
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m govuk-!-padding-top-3">Personal details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-6">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+           {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="change-why">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            11 February 1975
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="change-why">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+      </dl>
+
+      <h2 class="govuk-heading-m govuk-!-padding-top-7">Photo on your eVisa</h2>
+      <p class="govuk-body">This is the photo other people will see when you prove your immigration status.</p>
+
+
+      <img src="/public/images/john-doe.png" alt="Your photo" height="200" />
+      <p style="margin-top:10px"><a href="change-why">Change</a></p>
+
+      <h2 class="govuk-heading-m govuk-!-padding-top-7">Identity document</h2>
+      <p class="govuk-body">This identity document is linked to your eVisa. You must use it when entering the UK. </p>
+    <p class="govuk-body">You can add a new identity document if you want to use it to travel.</p>
+      <p class="govuk-body"><a href="/dead-ends/not-in-prototype" class="govuk-link">Add a new identity document</a></p>
+
+      <section class="id-doc-card govuk-!-margin-bottom-6">
+        <header class="id-doc-card_header">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Passport</h3>
+        </header>
+        <div class="id-doc-card_body">
+          {{ govukSummaryList({
+            classes: "govuk-!-margin-bottom-0",
+            rows: [
+              {
+                key: {
+                  text: "Number"
+                },
+                value: {
+                  text: "8477654212"
+                }
+              },
+              {
+                key: {
+                  text: "Nationality"
+                },
+                value: {
+                  text: "France"
+                }
+              },
+              {
+                key: {
+                  text: "Date of issue"
+                },
+                value: {
+                  text: "5 June 2016"
+                }
+              }
+            ]
+          }) }}
+        </div>
+      </section>
+
+    {% include "includes/help_contact_4-1.html" %}
+
+    {% include "includes/phase_banner_bottom.html" %}
+    </div>
+
+    </div>
+
+
+
+
+
+
+{% endblock %}

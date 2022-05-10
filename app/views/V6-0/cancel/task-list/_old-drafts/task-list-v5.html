@@ -1,0 +1,260 @@
+{% extends "V4-1/_layout_task-list.html" %}
+{% set serviceName="" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  href: "../applications",
+  text: "Go to Application"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} visa application
+    </h1>
+
+    <div class="tl-box">
+      <div class="tl-box-content">
+
+        <p>
+          <strong>
+            Unique application number:
+          </strong>UAN 3434-5999-5421-9332 <br>
+
+          <strong>
+            Status:
+          </strong>Submitted on {{ date() }}<br>
+        </p>
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">1. </span> Identity and contact
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+
+                Confirm your identity
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="confirm-identity">Completed</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="immigration-advisor">
+                Immigration adviser details
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="immigration-advisor">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="contact-preferences" aria-describedby="contact-preferences">
+                Contact preferences
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="contact-preferences">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="names-nationalities">
+                Other names and nationalities
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="names-nationalities">Completed</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span> Prepare application
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="company-information-status">
+                People applying with you
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="company-information-status">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="location">
+                Your location
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="location">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="personal-details">
+                Personal details
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="personal-details">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="family-relationships">
+                Family and relationships
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="family-relationships">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="living-arrangements">
+                Living arrangements
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="living-arrangements">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="travel-history">
+                Travel history
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="travel-history">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="criminality">
+                Criminality
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="criminality">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="security-questions">
+                Account security questions
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="security-questions">Completed</strong>
+          </li>
+
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="declaration">
+                Declaration
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="security-questions">Completed</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">3. </span> Pay and submit application
+        </h2>
+        <ul class="app-task-list__items">
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#">
+                Immigration health surcharge
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="ihs-charge">Completed</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+<a href="#">
+                Application payment
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="pay-visa">Completed</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">4. </span> Provide evidence
+        </h2>
+        <ul class="app-task-list__items">
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="evidence">
+                Evidence upload
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="evidence">Completed</strong>
+          </li>
+
+
+    </ol>
+  </div>
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-9">
+
+      <!-- Action 1: Download -->
+
+        <p>You can download a PDF copy of your application at any stage</p>
+          <p><span class="hod-file-empty side-space icon-small"></span>
+          <a href="#" onclick="window.print()">Download application</a></p>
+
+
+<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible govuk-!-margin-top-2">
+          <!-- Action 2: Withdraw -->
+
+      <div class="govuk-!-margin-top-2">
+      <p class="govuk-body">If you no longer wish to apply for a visa, you can withdraw your application.</p>
+        <p>We will refund you the Immigration Health Surcharge if you have paid it.</p>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Withdraw application",
+          classes: "govuk-button--warning"
+        }) }}
+      </div>
+
+
+        <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+<div class="govuk-!-margin-top-2">
+      <p class="govuk-body">If you are in the UK, you may be able to vary your application instead of withdrawing it.</p>
+      <p>Read <a href="vary-why">the guidance on changing or withdrawing your application</a>.</p>
+      </div>
+      </div>
+
+
+
+
+</div>
+
+{% include "includes/phase_banner_bottom.html" %}
+{% endblock %}

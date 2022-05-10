@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-889
+{% endblock %}
+
+{% set serviceName %}
+View a tenant's right to rent
+{% endset %}
+
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Housing and local services</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Being a landlord and renting out a room</a>
+      </li>
+    </ol>
+  </div> -->
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="add-share-code" method="post" class="form">
+
+      <h1 class="govuk-heading-xl">
+        Changes to right to rent checks
+      </h1>
+
+      <p>
+        From 6 April 2022, you cannot accept physical biometric residence cards or permits as proof of someone's right to rent. You must use this service.
+      </p>
+<br>
+
+        <button type="govuk-button" class="govuk-button">
+          Continue
+        </button>
+
+      </div>
+    {% endblock %}

@@ -1,0 +1,105 @@
+{% set serviceName = "" %}
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+              Declaration
+              </h1>
+              </legend>
+              <br>
+              <p>By sending this application, you confirm that to the best of your knowledge and belief the following is correct:</p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>the information relating to the application</li>
+                <li>the supporting evidence</li>
+              </ul>
+
+              <p>
+              I understand that the data I have given can be used as set out in the <a href="https://www.gov.uk/help/privacy-notice">privacy policy</a>.
+              </p>
+
+              <p>
+              I consent to organisations, including financial institutions, providing information to the Home Office when requested in relation to this application.
+              </p>
+
+              <p>
+              I have discussed with any applicants that I am applying on behalf of, and confirmed that the contents of the application are correct and complete.
+              </p>
+
+              <p>
+              I agree to the <a href="https://www.gov.uk/help/terms-conditions">terms and conditions</a>.
+              </p>
+
+              <p>
+              I understand that if false information is given, the applicant can be refused and I may be prosecuted, and, if I am the applicant, I may be banned from the UK.
+              </p>
+
+              <p>
+              I confirm that:
+              </p>
+
+              {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "declaration",
+  name: "declaration",
+  fieldset: {
+
+  },
+  items: [
+    {
+      value: "applicant-over-18",
+      text: "I am the applicant aged 18 or over"
+    },
+    {
+      value: "applicant-under-18",
+      text: "I am the applicant aged under 18"
+    },
+    {
+      value: "applicant-parent",
+      text: "I am the parent or legal guardian of the applicant who is aged under 18 and completing and submitting the form on their behalf"
+    },
+    {
+      value: "applicant-helper",
+      text: "I am submitting the form on behalf of the applicant"
+    }
+  ]
+}) }}
+
+              <div class="govuk-button-group">
+                <a href="pause" class="govuk-button" data-module="govuk-button">
+                 Continue
+                </a>
+
+                <a class="govuk-link" href="save-return-why">Save and return later</a>
+              </div>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

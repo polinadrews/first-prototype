@@ -1,0 +1,65 @@
+{% extends "layout_umd.html" %}
+{% set serviceName = "Update your details" %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "ask-phone-update-contact"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+<form action="" method="post" novalidate>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-phone-location-hint">
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <span class="govuk-caption-l">Update a contact</span>
+          <h1 class="govuk-fieldset__heading">
+          Is the new number a UK phone number?
+          </h1>
+        </legend>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="ucontact-phone-location-yes" name="contact-phone-location" type="radio" value="yes~ask-phone-uk">
+            <label class="govuk-label govuk-radios__label" for="contact-phone-location-yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-phone-location-no" name="contact-phone-location" type="radio" value="no~ask-country-code">
+            <label class="govuk-label govuk-radios__label" for="contact-phone-location-no">
+              No
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+    {{ govukButton({
+      text: "Continue",
+      classes: "govuk-!-margin-top-2"
+    }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

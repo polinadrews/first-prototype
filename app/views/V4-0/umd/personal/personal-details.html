@@ -1,0 +1,79 @@
+{% extends "layout_umd.html" %}
+{% set serviceName = "Update your details" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="before-continue" method="post" class="form">
+
+      {{ govukCheckboxes({
+        name: "personal-detail",
+        fieldset: {
+          legend: {
+            text: "Which personal details do you want to update?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Select all that apply."
+        },
+        items: [
+          {
+            value: "Identity document",
+            text: "Identity document",
+            id: "personal-detail-identity-document",
+            checked: checked("personal-detail", "Identity document")
+          },
+          {
+            value: "Name",
+            text: "Name",
+            id: "personal-detail-name",
+            checked: checked("personal-detail", "Name")
+          },
+          {
+            value: "Nationality",
+            text: "Nationality",
+            id: "personal-detail-nationality",
+            checked: checked("personal-detail", "Nationality")
+          },
+          {
+            value: "Date of birth",
+            text: "Date of birth",
+            id: "personal-detail-date-of-birth",
+            checked: checked("personal-detail", "Date of birth")
+          }
+        ]
+      }) }}
+
+    {{ govukButton({
+      text: "Continue",
+      classes: "govuk-!-margin-top-2"
+    }) }}
+
+    </form>
+
+    <div class="govuk-inset-text blue-inset">
+      Need help? <a class="govuk-link--no-visited-state" href="/ucda-326/help">Contact us</a>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

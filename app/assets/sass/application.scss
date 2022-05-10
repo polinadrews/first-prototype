@@ -15,4 +15,184 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/task-list";
 @import "patterns/related-items";
 
+@import "_custom/account-sub-nav";
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+@import "_custom";
+
+// Status profiles, for testing
+@import "status";
+
+// Application task list card redesign
+@import "_application-dashboard-experiments";
+
+// Id docs in an account (manage account) cdd
+@import "_id-doc";
+
+// CSS for modifying HMRC account menu
+@import "account-menu";
+
+// Header - blue extended
+
+.blue-long {
+  border-bottom: 10px solid #1d70b8!important;
+}
+
+// Help inset text
+.blue-inset {
+  border-left: 10px solid govuk-colour("blue");
+}
+
+// Phase banner at bottom of page
+.phase-banner-bottom {
+  border-top: 1px solid #b1b4b6;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+// Security code resend panel
+.security-code-panel {
+  background:  #005ea5;
+}
+
+// Applications list
+.ho-application {
+	margin-bottom: 1rem;
+	border: 1px solid #b1b4b6;
+	background: #f8f8f8;
+
+	.ho-application-content {
+    padding: 1rem;
+  }
+}
+
+// Darker secondary button
+
+.secondary-dark {
+  background-color: #dee0e2;
+}
+
+// Styles for document thumbnail in UMD
+
+.doc {
+  position: relative;
+  margin: 1.2em 0 1em;
+  padding: 0 0 0 129px;
+  overflow: hidden;
+
+  &__image {
+    position: relative;
+    float: left;
+    margin-top: 5px;
+    margin-left: -124px;
+    padding-bottom: 15px;
+
+    img {
+      display: block;
+      width: 99px;
+      height: 140px;
+      background: #fff;
+      outline: 5px solid rgba(11, 12, 12, 0.1);
+      -webkit-box-shadow: 0 2px 2px rgba(11, 12, 12, 0.4);
+      -moz-box-shadow: 0 2px 2px rgba(11, 12, 12, 0.4);
+      box-shadow: 0 2px 2px rgba(11, 12, 12, 0.4);
+    }
+  }
+
+  &__details {
+    float: left;
+
+    ul {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 27px;
+      font-weight: normal;
+      line-height: 1.1111111111;
+    }
+  }
+}
+
+///notification
+
+.panel {
+  box-sizing: border-box;
+  clear: both;
+  border-left-style: solid;
+  border-color: #bfc1c3;
+  padding: 0.2em 0.7em;
+  // margin-bottom: 0.78947em;
+
+  .a-blue {
+    color: #394ADB;
+  }
+}
+
+h2.govuk-heading-s {
+	margin-bottom: 0.4em;
+	margin-top: 0.6em;
+}
+
+.panel-border-wide {
+  border-left-width: 10px;
+}
+
+.panel-border-wide.alert-error {
+  border-color: #c42b2b;
+  background-color: #f3dede;
+}
+
+.panel-border-wide.alert-yellow {
+  border-color: #FFDD00;
+  background-color: #FFF7BF;
+}
+
+
+//@import "patterns/hmrc-banner/account-menu";
+
+
+.govuk-header nav {
+   padding: 5px 0;
+}
+
+.govuk-header nav {
+   @include govuk-media-query($from: tablet) {
+     float: right;
+   }
+}
+
+.govuk-header {
+  border-bottom: 10px solid #1d70b8;
+}
+
+.govuk-header__navigation-list {
+  display: block !important;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+// HOD kit-icons https://home-office-digital-patterns.herokuapp.com/styles/icons
+
+
+.side-space {
+  margin-right: .5em;
+}
+.icon-medium {
+  font-size: 24px;
+  &:before {
+    vertical-align: bottom;
+    padding-bottom: 1em;
+  }
+}
+.icon-small {
+  font-size: 18px;
+  &:before {
+    vertical-align: middle;
+    padding-bottom: 1em;
+  }
+}

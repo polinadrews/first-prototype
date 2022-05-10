@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-889
+{% endblock %}
+
+{% set serviceName %}
+View a tenant's right to rent
+{% endset %}
+
+{% block beforeContent %}
+  {% include "includes/phase_banner_beta.html" %}
+
+  <!-- <div class="signing-hack">
+    <!-- anchor to fake the sign out buttons. Doesn't resolve issue on mobile -->
+    <!-- <div class="signing">
+      <span>
+        <span style="padding-right:10px;"><a href="#">Help</a></span>
+        <!--
+        <a href="signed-out">Sign out</a>
+        -->
+      <!-- </span>
+    </div>
+  </div> -->
+
+  {% include "includes/backlink.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <form action="landlord-name" method="post" class="form"> -->
+
+      <form class="form" action="statutory-excuse" method="get">
+
+
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="checker-hint">
+
+
+
+          <div class="govuk-form-group">
+             <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                              Who are you?
+                            </h1>
+                          </legend>
+<!--start landlord name-->
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                                    <label class="govuk-label govuk-radios__label" for="contact">
+                                      Landlord
+                                    </label>
+                                        <span id="checker-1-item-hint" class="govuk-hint govuk-radios__hint">
+                                          You're the landlord if you rent a property or room to a tenant or lodger
+                                        </span>
+                                </div>
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label" for="contact-by-email">
+                                          Your name
+                                        </label>
+                                          <input class="govuk-input govuk-!-width-two-third" id="contact-by-email" name="contact-by-email" type="" spellcheck="false"></div>
+                                      </div>
+<!--end landlord Name-->
+
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          Agent
+        </label>
+          <span id="checker-1-item-hint" class="govuk-hint govuk-radios__hint">
+            You're the agent if you sign an agreement with a landlord to let their property and carry out checks
+          </span>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+            Your company name
+          </label>
+          <input class="govuk-input govuk-!-width-two-third" id="contact-by-phone" name="contact-by-phone" type="tel"></div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+        <label class="govuk-label govuk-radios__label" for="contact-3">
+          Tenant or lodger
+        </label>
+            <span id="checker-1-item-hint" class="govuk-hint govuk-radios__hint">
+              If you sublet a property or room, with or without your landlord's permission, this makes you a landlord
+            </span>
+
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            Your name
+          </label>
+          <input class="govuk-input govuk-!-width-two-third" id="contact-by-text" name="contact-by-text" type="tel"></div>
+
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+</div>
+
+
+
+
+
+      </div>
+
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+
+    </div>
+  </div>
+
+  {% endblock %}

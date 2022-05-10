@@ -1,0 +1,219 @@
+{% extends "V6-0/_layout-curtailed.html" %}
+{% set accountActive = "evisa" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div>
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <h1 class="govuk-heading-l">
+              Your eVisa
+        		</h1>
+
+
+            <!-- Status card start -->
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+                     {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+
+                    </dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      eVisa
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %}
+                    </dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Valid from
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">1 February 2020</p>
+                    </dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Valid until
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">13 June 2022</p>
+                    </dd>
+                  </div>
+                </dl>
+
+                <div class="govuk-!-padding-bottom-4"></div>
+                {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+                {{ govukWarningText({
+                  text: "We have changed the expiry date of your permission to enter and stay in the UK. The new expiry date is 13 June 2022.",
+                  iconFallbackText: "Warning"
+                }) }}
+
+
+
+
+
+              </div>
+
+
+              <div class="govuk-grid-column-one-third">
+                <img class="SS-profile-pic-align-right" src="/../../../../public/images/john-doe.png" alt="Your photo" />
+              </div>
+
+
+            </div>
+
+
+
+
+
+          <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <p>Contact <a href="https://www.gov.uk/contact-ukvi-inside-outside-uk">
+            UK Visas and Immigration</a> if you think this is wrong.</p>
+         <p>See your latest Home Office decision letter or email for more information about why this
+         happened and what to do next.</p>
+
+            <h2 class="govuk-heading-m">Prove your status</h2>
+
+            <p>If you need to prove your immigration status to someone, you can do this online with a share code.</p>
+            <a href="prove-why">
+               <button class="govuk-button" data-module="govuk-button">
+                 Get a share code
+               </button>
+            </a>
+          </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    <!-- Status card end -->
+
+
+</div>
+</div>
+
+
+<!-- <div class="govuk-grid-row"> -->
+<!-- <div class="govuk-grid-column-two-thirds-from-desktop"> -->
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">What you can do in the UK</h2>
+    {% if (data['visa-type'] == "Skilled Worker") %}
+    <p class="govuk body">As a {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} you can work:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>in your sponsored job</li>
+      <li>up to an extra 20 hours a week in another job. This role must be the same
+          occupation code as your sponsored job or on the Shortage Occupation List.
+          Your part time job must be outside the hours you work for your sponsor</li>
+      <li>as a volunteer.  This is unpaid except for reasonsable expenses</li>
+      <li>the notice period for a job you were doing when you applied</li>
+    </ul>
+    {% else %}
+        <p>As a <a href="visa-why" class="govuk-link">student,</a> you can:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>study, in line with the conditions listed in the decision (or grant) notice you received from UK Visas and Immigration</li>
+            <li>rent somewhere to live</li>
+            <li>use the NHS in a similar way to permanent UK residents</li>
+            <li>acccess a current account with a bank or building society in the UK</li>
+          </ul>
+          <p>You can also:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>work up to 10 hours a week during term-time</li>
+            <li>work full-time during the holidays</li>
+          </ul>
+        <p>You must share proof of your term dates with your employer.</p>
+        <p>You can also work on a placement which is part of the course your student visa is based on. The work placement must be:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>a compulsary part of your couse</li>
+            <li>assessed as part of your couse</li>
+          </ul>
+        <p>Read more about <a href="volunteer-why" class="govuk-link">volunteering, working for a student union and other types of work</a>.</p>
+        <p>You may be able to bring in <a href="spouse-why" class="govuk-link">your spouse or partner, as well as children</a> aged under 18 who depend on you for care.</p>
+    {% endif %}
+
+          {% if (data['visa-type'] == "Skilled Worker") %}
+           <p class="govuk body">You can also:</p>
+
+           <ul class="govuk-list govuk-list--bullet">
+             <li>study as long as it does not interfere with the job you are sponsored for. This
+                 must be in line with the conditions listed in the application decision letter
+                 or email you received from UK Visas and Immigration</li>
+             <li>rent somewhere to live</li>
+             <li>use the NHS in a similar way to permanent UK residents</li>
+             <li>access a current account with a bank or building society in the UK</li>
+           </ul>
+
+           <p class="govuk body">You may be able to bring in your spouse or partner, as well
+                                 as children aged under 18 who depend on you for care.</p>
+          {% else %}
+
+          {% endif %}
+
+
+          <h2 class="govuk-heading-l">Things you cannot do</h2>
+
+
+              <p class="govuk body">You cannot:</p>
+
+              {% if (data['visa-type'] == "Skilled Worker") %}
+              <ul class="govuk-list govuk-list--bullet">
+                <li>settle in the UK with this visa</li>
+                <li>get public funds</li>
+              </ul>
+        			{% else %}
+        				<ul class="govuk-list govuk-list--bullet">
+        					<li>study at an academy or state school</li>
+        					<li>work as an entertainer</li>
+        					<li>run a business or be self-employed unless you have applied for a start-up visa</li>
+        					<li>get <a href="https://www.gov.uk/government/publications/public-funds--2">public funds</a></li>
+        					<li>work as a professional sportsperson or coach</li>
+        				</ul>
+        			{% endif %}
+
+
+        <h2 class="govuk-heading-l">Legal basis of status</h2>
+
+             <p class="govuk body">You have been granted permission to stay in the UK
+                                   (also known as leave to remain) until the expiry date above.</p>
+
+
+
+                                      <!-- Status card end -->
+
+
+                                      <div style="margin: 0px 0px 30px 0px;">
+
+                                      </div>
+                                      <div class="govuk-grid-row">
+                                    		<div class="govuk-grid-column-two-thirds">
+                                    			{% include "includes/help_contact_4-1.html" %}
+                                    		</div>
+                                        </div>
+
+                                    {% endblock %}

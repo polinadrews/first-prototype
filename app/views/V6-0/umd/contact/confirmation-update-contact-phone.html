@@ -1,0 +1,73 @@
+{% extends "V6-0/_layout-umd.html" %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+{% if (data['update-contact-self-phone'] == "yes") %}
+{{ govukPanel({
+  titleText: "You have updated your contact and sign in phone number",
+  html: "We have sent you a confirmation email",
+  classes: "umd-confirm"
+}) }}
+{% else %}
+{{ govukPanel({
+        titleText: "You have updated your contact phone number",
+        html: "We have sent you a confirmation email",
+        classes: "umd-confirm"
+      }) }}
+{% endif %}
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% if (data['update-contact-self-phone'] == "yes") %}
+      <p>The contact phone number for your account is now {% if (data['number']) %}
+      {{data['number']}}
+      {% else%}
+      +447800900811
+      {% endif %}.</p>
+      <p>You can now use {% if (data['number']) %}
+      {{data['number']}}
+      {% else%}
+      +447800900811
+      {% endif %} to access your account.</p>
+  {% else %}
+    <p>The contact phone number for your account is now {% if (data['number']) %}
+    {{data['number']}}
+    {% else%}
+    +447800900811
+    {% endif %}.</p>
+    {% endif %}
+
+    <br>
+
+    <p class="govuk-body"><a class="govuk-link--no-visited-state" href="https://www.gov.uk/done/update-uk-visas-immigration-account-details">What did you think about this service?</a> (takes 30 seconds)</p>
+
+    <br>
+
+<div class="govuk-button-group">
+{{ govukButton({
+    text: "Back to Manage account",
+    href: "../../outcomes/curtailed/contact-details"
+  }) }}
+</div>
+{% include "includes/help_contact_4-1.html" %}
+  </div>
+</div>
+
+
+{% endblock %}

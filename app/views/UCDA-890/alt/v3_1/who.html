@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-890
+{% endblock %}
+
+{% set serviceName %}
+  View a job applicant's right to work
+{% endset %}
+
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+  {% include "includes/backlink.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="sportsperson-checker" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+            On whose behalf are you doing this check?
+            </h1>
+          </legend>
+
+          <p>  We'll use this to keep a record of your right to work check for audit purposes.</p>
+
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {% set companyHtml %}
+        {{ govukInput({
+        id: "my-company",
+        name: "my-company",
+        type: "text",
+        spellcheck: false,
+        classes: "govuk-!-width-two-thirds",
+        label: {
+        }
+        }) }}
+        {% endset -%}
+
+        {% set otherHtml %}
+        {{ govukInput({
+        id: "other",
+        name: "other",
+        type: "text",
+        spellcheck: false,
+        classes: "govuk-!-width-two-thirds",
+        label: {
+        text: "Please enter the name of the company you are doing this check for"
+        }
+        }) }}
+        {% endset -%}
+
+        {{ govukRadios({
+        idPrefix: "who",
+        name: "who",
+        fieldset: {
+        },
+        hint: {
+        text: "Select one option."
+        },
+        items: [
+        {
+        value: "The company I am employed by",
+        text: "The company I am employed by",
+        conditional: {
+        html: companyHtml
+        }
+        },
+        {
+        value: "other",
+        text: "As a third party on behalf of another company",
+        conditional: {
+        html: otherHtml
+        }
+        }
+        ]
+        }) }}
+
+
+
+
+<div class="govuk-!-padding-bottom-2"></div>
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+
+          </div>
+      </div>
+
+      {% endblock %}

@@ -1,0 +1,163 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-890
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Their immigration status
+            </h1>
+          </legend>
+<!-- Status card start -->
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-two-thirds">
+                    <dl class="govuk-summary-list">
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                         Name
+                        </dt>
+
+                        <dd class="govuk-summary-list__value">
+                         John Doe
+                        </dd>
+                       </div>
+
+                       <div class="govuk-summary-list__row">
+                         <dt class="govuk-summary-list__key">
+                          Status
+                         </dt>
+                         <dd class="govuk-summary-list__value">
+                          Settlement, also known as indefinite leave to remain
+                         </dd>
+                      </div>
+                    </dl>
+                </div>
+
+                  <div class="govuk-grid-column-one-third">
+
+                    <img class="SS-profile-pic-align-right" src="/../../../../public/images/john-doe.png" alt="Your photo" />
+                       <input id="rotateImage" class="button-secondary no-print" aria-label="Rotate profile image" type="button" value="Rotate ↻"></input>
+
+                  </div>
+
+                </div>
+              </div>
+           </div>
+
+
+  <!-- Status card end -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="govuk-grid-row"> -->
+    <!-- <div class="govuk-grid-column-two-thirds-from-desktop"> -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <h2 class="govuk-heading-l">Summary of what they can do in the UK </h2>
+
+
+        <p>There is no limit on how long they can stay in the UK.</p>
+        <br />
+
+            <div class="SS-status-card_header-checker-double">
+              <h2 class="govuk-heading-m" style= "padding-left: 15px">Details of check</h2>
+
+
+              <div class="grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                  <h3 class="govuk-heading-s">Organisation or company</h3>
+                  <p>Another Company Ltd</p>
+                </div>
+                </div>
+
+              <div class="grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <h3 class="govuk-heading-s">Job title of checker</h3>
+                  <p id="checkDate">Adminstrator</p>
+                </div>
+              </div>
+
+              <div class="grid-row">
+                <div class="govuk-grid-column-two-thirds">
+
+                  <h3 class="govuk-heading-s">Date of check</h3>
+                  <p>5 July 2021</p>
+              </div>
+              </div>
+
+              <div class="grid-row">
+                  <div class="govuk-grid-column-one-third">
+                    <h3 class="govuk-heading-s">Reference number</h3>
+                    <p>SC-4CL8BW2-ZX</p>
+                </div>
+              </div>
+              <!--
+              <div class="grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                  <h3 class="govuk-heading-s">Purpose of check</h3>
+                  <p>Another reason</p>
+                </div>
+              </div> -->
+              </div>
+            </div>
+            </div>
+
+
+            <div style="margin: 0px 0px 30px 0px;">
+
+              <p style="display:inline;margin:0 30px 0 0;"><span class="hod-printer side-space icon-medium"></span><a href="#" onclick="window.print()" class="no-print">Print this page</a></p>
+
+              <p style="display:inline;margin:0 30px 0 0;"><span class="hod-file-empty side-space icon-medium"></span><a href="#" onclick="window.print()" class="no-print">Download PDF</a></p>
+
+
+
+<br>
+<br>
+</div>
+
+<form action="enter-sharecode2" method="post" class="form">
+<div class="govuk-button-group">
+
+
+    <button type="submit" class="govuk-button">
+    Check someone else's status
+  </button>
+
+
+
+
+
+<a class="govuk-link" href="start">Finish and leave service</a>
+</div>
+
+
+
+
+
+{% endblock %}

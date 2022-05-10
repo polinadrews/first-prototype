@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Application Submission Flow
+{% endblock %}
+
+{% set serviceName="" %}
+
+
+{% block beforeContent %}
+  {% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <form action="research-setup-2-router" method="post" novalidate="novalidate" spellcheck="false">
+
+    <h1 class="govuk-heading-l">
+      [pause for the researcher to tell you what to do]
+    </h1>
+
+
+        {{ govukRadios({
+          idPrefix: "scenario-v6",
+          name: "scenario-v6",
+          fieldset: {
+            legend: {
+              text: "Scenario",
+              classes: "govuk-label--s"
+            }
+          },
+          items: [
+            {
+              value: "sc-1",
+              text: "Account route 1"
+            },
+            {
+              value: "sc-2",
+              text: "Account route 2"
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        </form>
+        </div>
+      </div>
+
+      {% endblock %}

@@ -1,0 +1,116 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-678
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <form action="#" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Your right to work
+            </h1>
+          </legend>
+
+
+
+          <!-- Status card start -->
+
+          <div class="SS-status-card">
+            <div class="SS-status-card_header">
+              <h2 class="govuk-heading-s SS-white">Right to work</h2>
+            </div>
+            <div class="SS-status-card_body clearfix">
+
+              <div class="SS-threequarter">
+                <div class="SS-status-card__bodyPadding">
+                  <h2 class="govuk-heading-m">Olivia Lesotho</h2>
+                     <p>You can work in the UK until 30 September 2024.</p>
+
+                  <h3 class="govuk-heading-s">Details</h3>
+
+                  <p class="govuk body">On your current visa, you must work for your sponsor while you are in the UK.</p>
+
+                <h3 class="govuk-heading-s">Conditions</h3>
+
+                  <p class="govuk body">You can also work in a part-time job (up to 20 hours per week) if it is one of the following:</p>
+
+                     <ul class="govuk-list govuk-list--bullet">
+                       <li>the same role as your current job</li>
+                       <li>on the <a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-shortage-occupation-list">Shortage Occupation List</a></li>
+                     </ul>
+
+                  <p class="govuk-body">Your part-time job must be outside the hours you work for your sponsor.</p>
+
+                  <p class="govuk-body">You can also:</p>
+
+                     <ul class="govuk-list govuk-list--bullet">
+                       <li>do voluntary work &#8211 this is unpaid except for reasonable expenses</li>
+                        <li>complete the notice period for a job you were doing when you applied</li>
+                    </ul>
+
+                  <p class="govuk-body">These conditions are the standard requirements for your visa.</p>
+
+                </div>
+              </div>
+              <!--  -->
+              <div class="SS-onequarter">
+                <img class="SS-profile-pic" src="../../../../public/images/olivia-lesotho copy.jpeg"/>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+<br>
+          <!-- Status card end -->
+
+          <!--start share status and update details  -->
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Do not give this page to your employer, it is not proof of your right to work.
+            </strong>
+          </div>
+
+          <p class="govuk-body">To share your details with an employer, you need to create a share code.</p>
+
+              <a href="#">
+                 <button class="govuk-button" data-module="govuk-button">
+                   Continue
+                 </button>
+              </a>
+
+          <p class="govuk-body">If any of your details or other information on this page is not correct,
+            contact the <a href="#">UKVI Resolution Centre</a>.</p>
+
+          <!-- end start share status and update details -->
+
+        </div>
+
+        <div>
+          <p><a href="start">Finish and leave service</a></p>
+        </div>
+
+
+      </div>
+    </div>
+
+    {% endblock %}

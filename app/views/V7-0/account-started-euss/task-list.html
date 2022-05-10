@@ -1,0 +1,135 @@
+{% extends "V7-0/_layout_task-list.html" %}
+{% set serviceUrl = "home" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+    Apply for the EU Settlement Scheme
+    </h1>
+
+    <p class="govuk-!-margin-bottom-7">
+    <strong>Unique application number (UAN):</strong>
+  3434-5999-5421-9332
+    </p>
+
+
+
+    <div class="tl-box">
+      <div class="tl-box-content">
+        <p class="govuk-body govuk-!-margin-bottom-4">
+        <strong>
+          Status:
+        </strong>Started on {{ date() }}
+        </p>
+        <!-- <p class="govuk-body govuk-!-margin-bottom-4">  <strong>
+          Submitted:
+          </strong>1 April 2022
+          </p> -->
+          <p><span class="hod-file-empty side-space icon-small"></span>
+            <a href="#" onclick="window.print()">Download application (PDF copy)</a></p>
+
+
+<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+
+        <p class="govuk-body govuk-!-margin-top-3">If you no longer want to apply, you can <a class="govuk-link--no-visited-state" href="delete-why">delete your application</a>.</p>
+
+
+
+
+
+
+        </div>
+        </div>
+
+
+
+
+  <p class="govuk-!-padding-top-5">You need to complete every section.</p>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <!-- <span class="app-task-list__section-number">1. </span> Identity and contact -->
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a class="govuk-link govuk-link--no-visited-state" href="task-list-why">
+              Identity
+              </a>
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="confirm-identity">Completed</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="next-pause" aria-describedby="application-type">
+              Application type
+              </a>
+            </span>
+
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="next-pause" aria-describedby="residence-UK">
+                Residence in the UK
+              </a>
+            </span>
+
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="next-pause" aria-describedby="criminal-convictions">
+                Criminal convictions
+              </a>
+            </span>
+
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="next-pause" aria-describedby="criminal-convictions">
+                Digital photo
+              </a>
+            </span>
+
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+
+                Confirm and continue
+
+            </span>
+
+          </li>
+        </ul>
+      </li>
+
+    </ol>
+  </div>
+
+
+
+
+
+</div>
+
+{% include "includes/phase_banner_bottom.html" %}
+{% endblock %}

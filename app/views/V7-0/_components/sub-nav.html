@@ -1,0 +1,30 @@
+{% if subNavState == "full" %}
+
+<nav class="account-side-navigation" aria-label="Manage account menu">
+  <ul class="account-side-navigation__list">
+  	<li class="account-side-navigation__item {%- if subNavActive == 'personal' %} {{ 'account-side-navigation__item--active' }} {% endif -%}">
+      <a class="govuk-link--no-visited-state account-side-nav__link account-side-nav__link--no-underline" href="personal-information" {%- if subNavActive == 'personal' %} {{ 'aria-current="page"' }} {% endif -%}>Personal</a>
+    </li>
+    <li class="account-side-navigation__item {%- if subNavActive == 'contact' %} {{ 'account-side-navigation__item--active' }} {% endif -%}">
+      <a class="govuk-link--no-visited-state account-side-nav__link account-side-nav__link--no-underline" href="contact-details" {%- if subNavActive == 'contact' %} {{ 'aria-current="page"' }} {% endif -%}>Contact</a>
+    </li>
+    <li class="account-side-navigation__item {%- if subNavActive == 'sign-in' %} {{ 'account-side-navigation__item--active' }} {% endif -%}">
+      <a class="govuk-link--no-visited-state account-side-nav__link account-side-nav__link--no-underline" href="sign-in" {%- if subNavActive == 'sign-in' %} {{ 'aria-current="page"' }} {% endif -%}>Sign in</a>
+    </li>
+  </ul>
+</nav>
+
+{% else %}
+
+<nav class="account-side-navigation" aria-label="Manage account menu">
+  <ul class="account-side-navigation__list">
+    <li class="account-side-navigation__item {%- if subNavActive == 'contact' %} {{ 'account-side-navigation__item--active' }} {% endif -%}">
+      <a class="govuk-link--no-visited-state account-side-nav__link account-side-nav__link--no-underline" href="contact-details" {%- if subNavActive == 'contact' %} {{ 'aria-current="page"' }} {% endif -%}>Contact</a>
+    </li>
+    <li class="account-side-navigation__item {%- if subNavActive == 'sign-in' %} {{ 'account-side-navigation__item--active' }} {% endif -%}">
+      <a class="govuk-link--no-visited-state account-side-nav__link account-side-nav__link--no-underline" href="sign-in" {%- if subNavActive == 'sign-in' %} {{ 'aria-current="page"' }} {% endif -%}>Sign in</a>
+    </li>
+  </ul>
+</nav>
+
+{% endif %}

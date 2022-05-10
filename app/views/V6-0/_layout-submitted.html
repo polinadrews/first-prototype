@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "UK Visas and Immigration",
+  serviceUrl: "/V6-0/cancel/home",
+  classes: "blue-long",
+  navigation: [
+    {
+      href: "/prototype-admin/clear-data",
+      text: "Sign out"
+    }
+  ]
+
+}) }}
+
+<div class="moj-primary-navigation">
+
+  <div class="moj-primary-navigation__container">
+
+    <div class="moj-primary-navigation__nav">
+
+      <nav class="moj-primary-navigation" aria-label="Primary navigation">
+
+        <ul class="moj-primary-navigation__list">
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" href="home" {%- if accountActive == 'home' %} {{ 'aria-current="page"' }} {% endif -%}>Account home</a>
+          </li>
+
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" href="applications" {%- if accountActive == 'applications' %} {{ 'aria-current="page"' }} {% endif -%}>Application</a>
+          </li>
+
+
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" href="contact-details" {%- if accountActive == 'manage' %} {{ 'aria-current="page"' }} {% endif -%}>Manage account</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+
+  {{ govukFooter({
+    meta: {
+      items: [
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        },
+        {
+          href: "/docs/cookies",
+          text: "Cookies"
+        },
+        {
+          href: "/docs/privacy-policy",
+          text: "Privacy policy"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

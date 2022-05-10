@@ -1,0 +1,42 @@
+{% extends "V5-0/_layout-account.html" %}
+{% set accountActive = "home" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+UK Visas and Immigration account
+{% block content %}
+
+  <!-- START dashboard -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="delete-success" method="post" class="form">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                Are you sure you want to delete the application for your {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Student{% endif %} visa?
+                </h1>
+              </legend>
+
+
+
+              <div class="govuk-!-margin-top-3">
+                <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+                Yes, delete application
+              </button>
+              </div>
+
+              <p>
+              <a class="govuk-link" href="home">Cancel and go back to Application overview</a>
+              </p>
+            </div>
+
+        </div>
+
+
+
+{% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

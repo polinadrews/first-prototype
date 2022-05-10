@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UCDA-890
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+  {% include "includes/backlink.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="checker-purpose2" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Who is doing this check?
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+            Job title
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" aria-describedby="event-name-hint">
+          </div>
+
+
+      <div class="govuk-form-group">
+      <label class="govuk-label" for="event-name">
+        Organisation or company name
+        </label>
+        <div id="event-name-hint" class="govuk-hint">
+          Include your local office or branch nam
+        </div>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" aria-describedby="event-name-hint">
+        </div>
+
+        </div>
+
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+
+          </div>
+      </div>
+
+      {% endblock %}
