@@ -1,0 +1,95 @@
+{% extends "V7-1/_layout-submitted.html" %}
+{% set serviceUrl = "home" %}
+
+{% set accountActive = "home" %}
+
+{% block pageTitle %}
+UK Visas and Immigration account
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+	  <div class="govuk-grid-column-two-thirds">
+
+	  </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-two-thirds">
+
+  	  <span class="govuk-caption-l">Account home</span>
+  	  <h1 class="govuk-heading-l govuk-!-margin-bottom-9">
+
+  		  {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+  		  {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+
+  		</h1>
+
+    </div>
+
+  </div>
+
+
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <section class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">eVisa</h2>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <p class="govuk-body">You have a {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Skilled Worker{% endif %} eVisa with permission to stay in the UK (also known as leave to remain){% if (data['scenario-v7-1'] == "sc-1") %}.
+          {% else %} until 13 June 2022.{% endif %}</p>
+
+
+          <p class="govuk-body"><a href="evisa">Check what you can do in the UK</a></p>
+          <p class="govuk-body"><a href="../status/vp/vp-share-code-info">Get a share code </a></p>
+        </section>
+
+        <section class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">Your application</h2>
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <p class="govuk-body">You are waiting for our decision on the {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Skilled Worker{% endif %} visa application you have submitted.</p>
+
+          <p class="govuk-body">Unique application number (UAN): 3434-5999-5421-9332</p>
+
+          <p class="govuk-body"><a href="applications">View your application</a></p>
+        </section>
+
+          <section class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">Manage your account</h2>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p class="govuk-body">You must keep your details up to date so that you can:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>travel with all your valid identity documents and avoid delays at the border</li>
+            <li>be contacted by us &ndash; for example, about your immigration status </li>
+            <li>sign in to your account securely</li>
+          </ul>
+          <ul class="govuk-list govuk-list--spaced">
+            <li>
+              <a class="govuk-link" href="personal-information">Manage your personal information</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="contact-details">Manage your contact details</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="sign-in">Manage your sign in details</a>
+            </li>
+          </ul>
+		  	</section>
+
+
+
+
+        {% include "includes/help_contact_4-1.html" %}
+      </div>
+  </div>
+
+{% include "includes/phase_banner_bottom.html" %}
+
+{% endblock %}

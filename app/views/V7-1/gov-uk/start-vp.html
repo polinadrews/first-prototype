@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+View and prove your immigration status
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Visas and immigration</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">EU, EEA and Swiss citizens</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      View and prove your immigration status
+    </h1>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <p>If you have been told you can view your immigration status online you can use this service to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>get a ‘share code’ to prove your status to others, for example employers</li>
+      <li>update personal details in your UK Visas and Immigration account, for example your passport number or email address</li>
+      <li>check what rights you have in the UK, for example the right to work, rent or claim benefits</li>
+    </ul>
+
+
+    <h2 class="govuk-heading-m">Who can use this service</h2>
+    <p>You can use this service if you:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>have settled or pre-settled status</li>
+      <li>fapplied for a visa and used the ‘UK Immigration: ID Check’ app to scan your identity document on your phone</li>
+    </ul>
+
+    <p>
+      You cannot use this service if you have a vignette in your passport or a biometric residence permit to prove your immigration status.
+      </p>
+
+      <div class="govuk-inset-text">
+        There are different services for you to <a target="external" href="https://www.gov.uk/prove-right-to-work">prove your right to work</a> to an employer and to <a target="external"
+            href="https://www.gov.uk/prove-right-to-rent">prove your right to rent</a> to a landlord.
+      </div>
+
+
+
+    <h2 class="govuk-heading-m">View or prove your immigration status</h2>
+    <p>You’ll need:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>details of the identity document you used when you applied (your passport, national identity card, or biometric residence card or permit)</li>
+      <li>your date of birth</li>
+      <li>access to the mobile number or email address you used when you applied - you’ll be sent a code for logging in</li>
+    </ul>
+
+
+    <a href="../account/next-pause" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
+      Sign in
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+      </svg>
+    </a>
+
+    <h2 class="govuk-heading-m">Before you start</h2>
+    <p><a href="https://www.gov.uk/contact-ukvi-inside-outside-uk/y/inside-the-uk/technical-problems-with-your-online-application-account-or-status-excludes-eu-settlement-scheme">Contact UKVI if you cannot get into your UK Visas and Immigration account</a>.</p>
+
+    
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Related content
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="https://www.gov.uk/settled-status-eu-citizens-families">
+              Your immigration status: an introduction for EU, EEA and Swiss citizens
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+{% endblock %}

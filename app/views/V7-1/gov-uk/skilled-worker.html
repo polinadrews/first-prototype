@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+​
+{% block pageTitle %}
+Skilled worker visa
+{% endblock %}
+​
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+​
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Visas and immigration</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Work in the UK</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+​
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+​
+      <h1 class="govuk-heading-xl">
+        Skilled worker visa
+​
+      </h1>
+​
+        <p class="govuk-body">Contents</p>
+          <ul class="govuk-list">
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">Overview</a></li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">Your job</a></li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">When you can be paid less</a></li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">If you work in healthcare or education</a></li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">Knowledge of English</a></li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">Documents you'll need to apply</a></li>
+            <li>&#8212; &nbsp;Apply</li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">Your partner and children</a></li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">Extend your visa</a></li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">Update your visa if you change job or employer</a></li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">Switch to this visa</a></li>
+            <li>&#8212; &nbsp;<a class="govuk-link" href="#">Taking on additional work</a></li>
+          </ul>
+​
+              <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+​
+      <h2 class="govuk-heading-l">Apply</h2>
+        <p class="govuk-body">You must apply online for a Skilled Worker visa.</p>
+        <p class="govuk-body">Check which <a href="#"> documents you'll need to apply</a>.</p>
+        <p class="govuk-body">Your<a href="#"> partner or children</a> will need to apply separately.</p>
+​
+      <h2 class="govuk-heading-m">Proving your identity and providing supporting documents</h2>
+        <p class="govuk-body">As part of your application, you'll need to prove your identity. How you do this depends on where you’re from and what type of passport you have.</p>
+        <p class="govuk-body">You'll either:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>have your fingerprints and photograph taken at a visa application centre - this is to get a <a href="">biometric residence permit</a></li>
+          <li>use the ‘UK Immigration: ID Check’ app to scan your identity document - you’ll also create or sign into your UK Visas and Immigration (UKVI) account</li>
+        </ul>
+        <p class="govuk-body">You’ll be told what you need to do when you apply.</p>
+        <p class="govuk-body">If you do need an appointment:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the centre may need to keep your passport and documents while they process your application</li>
+          <li>you may have to travel to get to your nearest visa application centre (this could be in another country)</li>
+        </ul>
+​
+      <h2 class="govuk-heading-m">Apply for a Skilled Worker visa</h2>
+        <p class="govuk-body">Once you've started your application, you can save your form and complete it later.</p>
+​
+            <a href="../auk2/create-account" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+              Start now
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+              </svg>
+            </a>
+​
+      <h2 class="govuk-heading-m">Continue your application</h2>
+        <p>Sign in to your account using the link from your sign-up email.</p>
+​
+      <h2 class="govuk-heading-m">How long it takes to get a decision</h2>
+        <p>Once you’ve applied online, proved your identity and provided your documents, you’ll usually get a decision within 3 weeks.</p>
+        <p>You’ll be contacted if your application will take longer, for example because:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your supporting documents need to be verified</li>
+          <li>you need to attend an interview</li>
+          <li>of your personal circumstances, for example if you have a criminal conviction</li>
+        </ul>
+​
+        <p>You may be able to pay to <a href="#">get a faster decision</a> - you’ll be told if you can when you apply.</p>
+​
+      <h2 class="govuk-heading-m">After you apply</h2>
+        <p class="govuk-body">You can ask to <a href="#">cancel your application</a>. You'll only get your fee
+          refunded if UKVI has not started processing your application.</p>
+        <p class="govuk-body">You'll get an email containing the <a href="#">decision on your application</a>. This will explain
+          what you need to do next.</p>
+​
+    </div>
+  </div>
+{% endblock %}

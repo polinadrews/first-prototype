@@ -1,0 +1,48 @@
+{% extends "V7-1/_layout-status.html" %}
+
+{% block pageTitle %}
+View and prove your immigration status
+{% endblock %}
+
+{% set serviceName %}
+View and prove your immigration status
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<!-- <div class="govuk-width-container"> -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="../share-options" method="post" class="form">
+
+
+      <h1 class="govuk-heading-xl">Get a share code to prove your status</h1>
+
+      <p class="govuk body">You may find someone needs to confirm things like your right to work or live in the UK. This could be before you arrive or while you are here.</p>
+
+      <p>
+        You can give them access to the information they need by creating a share code.
+        </p>
+
+        <p>
+        The share code will be valid for 90 days from the day it is created.
+        </p>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Get share code
+        </button>
+
+        <!-- <a style="margin:30px" class="govuk-body" href="RTR-choice">Cancel and go back to choose again</a> -->
+
+
+  </div>
+</div>
+
+{% endblock %}

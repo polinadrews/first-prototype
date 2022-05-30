@@ -1,0 +1,94 @@
+{% extends "V7-1/_layout-status.html" %}
+
+{% block pageTitle %}
+Prove your right to work
+{% endblock %}
+
+{% set serviceName %}
+Prove your right to work
+{% endset %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">This is what the checker will see</h1>
+
+     <!-- Status card start -->
+        <div class="SS-status-card">
+          <div class="SS-status-card_header">
+            <h2 class="govuk-heading-s SS-white">{% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+            {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}</h2>
+          </div>
+        <div class="SS-status-card_body clearfix">
+
+            <div class="SS-threequarter">
+              <div class="SS-status-card__bodyPadding">
+                <h2 class="govuk-heading-m">Their rights in the UK</h2>
+                <p class="govuk body">
+                They can work in the UK{% if (data['scenario-v7-1'] == "sc-1") %}.
+                {% else %} until 13 June 2022.{% endif %}
+                </p>
+
+                <p class="govuk body">
+                As a Skilled Worker, they can study. This must be in line with the conditions listed in the decision (or grant) notice they received from UK Visas and Immigration.
+                </p>
+
+                  <p class="govuk body">They are waiting for a decision on an application to stay in the UK. What they can do in the UK does not change while they wait for a decision.
+                    </p>
+
+
+
+                     <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Legal basis of status
+                        </span>
+                      </summary>
+                         <div class="govuk-details__text">
+                           {% if (data['scenario-v7-1'] == "sc-1") %}
+                             <p class="govuk body">Their permission to stay in the UK has been extended under Section 3C of the Immigration Rules.
+                               </p>
+
+                           {% else %}
+                           <p class="govuk body">They have been granted permission to stay in the UK
+                                                    (also known as leave to remain) until the expiry date above.</p>
+                           {% endif %}
+
+                          </div>
+                         </details>
+
+              </div>
+            </div>
+              <!--Image start-->
+              <div class="SS-onequarter">
+                <img class="SS-profile-pic" src="/../../../../public/images/john-doe.png" />
+                <input id="rotateImage" class="button-secondary no-print" aria-label="Rotate profile image" type="button" value="Rotate ↻">
+              </div>
+              <!--Image end-->
+            </div>
+          </div>
+<br>
+          <!-- Status card end -->
+
+                 <p>To share your details with an employer, you need to create a share code.</p>
+
+                 <a href="create-share-code">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Create share code
+                    </button>
+                 </a>
+
+
+
+
+      </div>
+    </div>
+
+    {% endblock %}

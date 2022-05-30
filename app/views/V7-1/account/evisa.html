@@ -1,0 +1,240 @@
+{% extends "V7-1/_layout-submitted.html" %}
+{% set serviceUrl = "home" %}
+
+{% set accountActive = "evisa" %}
+
+{% block pageTitle %}
+UK Visas and Immigration
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div>
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <h1 class="govuk-heading-l">
+              Your eVisa
+        		</h1>
+
+
+            <!-- Status card start -->
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {% if data['given-name'] %}{{ data['given-name'] }}{% else %}Daryl{% endif %}
+                     {% if data['surname'] %}{{ data['surname'] }}{% else %}Machado Gomes{% endif %}
+
+                    </dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      eVisa
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {% if data['visa-type'] %}{{ data['visa-type'] }}{% else %}Skilled Worker{% endif %}{% if (data['scenario-v7-1'] == "sc-2") %} (extended){% endif %}
+                    </dd>
+                  </div>
+
+                  <!-- expired -->
+                  {% if (data['scenario-v7-1'] == "sc-1") %}
+                  </dl>
+                  <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+                  <p class="govuk-body">
+                  You can stay in the UK until you receive a decision on your application, or the outcome of any appeal or administrative review.
+                  </p>
+                  <p class="govuk-body govuk-!-padding-bottom-4">
+                  What you can do in the UK does not change until you receive a decision.
+                  </p>
+                  </div>
+                  </div>
+
+
+                  <!-- not expired -->
+                  {% else %}
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Valid from
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">1 February 2020</p>
+                    </dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Valid until
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">13 June 2022</p>
+                    </dd>
+                  </div>
+                  </dl>
+                  <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+                  <p class="govuk-body">
+                  Your eVisa has been extended until you receive a decision on your application, or the outcome of any appeal or administrative review.
+                  </p>
+                  </div>
+                  </div>
+
+
+                    {% endif %}
+
+
+
+
+
+
+
+
+              </div>
+
+
+              <div class="govuk-grid-column-one-third">
+                <img class="SS-profile-pic-align-right" src="/../../../../public/images/john-doe.png" alt="Your photo" />
+              </div>
+
+
+            </div>
+
+
+
+
+
+          <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+            <h2 class="govuk-heading-m">Prove your status</h2>
+
+            <p>If you need to prove your immigration status to someone, you can do this online with a share code.</p>
+            <a href="../status/share-options">
+               <button class="govuk-button" data-module="govuk-button">
+                 Get a share code
+               </button>
+            </a>
+          </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    <!-- Status card end -->
+
+
+</div>
+</div>
+
+
+<!-- <div class="govuk-grid-row"> -->
+<!-- <div class="govuk-grid-column-two-thirds-from-desktop"> -->
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">What you can do in the UK</h2>
+
+    <p class="govuk body">As a <a href="#">skilled worker,</a> you can work:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>in your sponsored job</li>
+      <li>up to an extra 20 hours a week in another job. This role must be the same
+          occupation code as your sponsored job or on the Shortage Occupation List.
+          Your part time job must be outside the hours you work for your sponsor</li>
+      <li>as a volunteer.  This is unpaid except for reasonsable expenses</li>
+      <li>the notice period for a job you were doing when you applied</li>
+    </ul>
+
+
+
+           <p class="govuk body">You can also:</p>
+
+           <ul class="govuk-list govuk-list--bullet">
+             <li>study as long as it does not interfere with the job you are sponsored for. This
+                 must be in line with the conditions listed in the application decision letter
+                 or email you received from UK Visas and Immigration</li>
+             <li>rent somewhere to live</li>
+             <li>use the NHS in a similar way to permanent UK residents</li>
+             <li>access a current account with a bank or building society in the UK</li>
+             <li>travel in and out of the country without having to prove your status, as your information will be checked automatically</li>
+           </ul>
+
+           <p class="govuk body">You may be able to bring in your spouse or partner, as well
+                                 as children aged under 18 who depend on you for care.</p>
+
+
+
+          <h2 class="govuk-heading-l">Things you cannot do</h2>
+
+
+              <p class="govuk body">You cannot:</p>
+
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>settle in the UK with this visa</li>
+                <li>get public funds</li>
+              </ul>
+
+              <div class="govuk-!-padding-top-3">
+  <h2 class="govuk-heading-l">Register with the police</h2>
+   <p>You must <a href="#">register with the police</a> within 7 days of you:
+   </p>
+   <ul class="govuk-list govuk-list--bullet">
+     <li>arriving in the UK if you applied for a visa from outside the UK</li>
+     <li>being notified of your new status if you were already in the UK when you applied</li>
+   </ul>
+
+<p>Even if you have previously registered, you must do so again. You must take your decision letter or email with you. Visit <a href="#">UK visas and registering with the police</a> for information on where to go, what other documents to take and how to report any change to your circumstances.</p>
+</div>
+
+
+<div class="govuk-!-padding-top-3">
+  <h2 class="govuk-heading-l">National Insurance number</h2>
+    <p class="govuk-body">
+      You need a National Insurance number if you plan to work in the UK.
+      </p>
+      <p class="govuk body">
+        If you do not already have a National Insurance number and it has been more than 10 days since you got your visa,
+        you need to <a href="https://www.gov.uk/apply-national-insurance-number">apply for one</a>. You can only apply from inside the UK.</p>
+  </div>
+
+
+
+      <!-- legal basis of status
+      <div class="govuk-!-padding-top-3">
+        <h2 class="govuk-heading-l">Legal basis of status</h2>
+        {% if (data['scenario-v7-1'] == "sc-1") %}
+          <p class="govuk body">Your permission to stay in the UK has been extended under Section 3C of the Immigration Rules.
+            </p>
+
+        {% else %}
+        <p class="govuk body">You have been granted permission to stay in the UK
+                                 (also known as leave to remain) until the expiry date above.</p>
+        {% endif %}
+      </div>
+      -->
+
+
+                                      <!-- Status card end -->
+
+
+                                      <div style="margin: 0px 0px 30px 0px;">
+
+                                      </div>
+                                      <div class="govuk-grid-row">
+                                    		<div class="govuk-grid-column-two-thirds">
+                                    			{% include "includes/help_contact_4-1.html" %}
+                                    		</div>
+                                        </div>
+
+                                    {% endblock %}

@@ -1,0 +1,107 @@
+{% extends "V7-1/_layout-status.html" %}
+
+{% block pageTitle %}
+View and prove your immigration status
+{% endblock %}
+
+{% set serviceName %}
+View and prove your immigration status
+{% endset %}
+
+{% block beforeContent %}
+
+{% include "includes/phase_banner_beta.html" %}
+{% include "includes/backlink.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- <div class="govuk-width-container"> -->
+
+
+<!-- <main class="govuk-main-wrapper " id="main-content" role="main"> -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+          <form action="share-options-router" method="post" novalidate="novalidate" spellcheck="false">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Why do you need a share code?
+            </h1>
+          </legend>
+          <br>
+
+
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option1" name="reason" type="radio" value="work" aria-describedby="option1">
+              <label class="govuk-label govuk-radios__label" for="option1">
+                To prove my right to work
+              </label>
+              <div id="option-hint" class="govuk-hint govuk-radios__hint">
+                Including work placements
+              </div>
+              </div>
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option2" name="reason" type="radio" value="rent" aria-describedby="option2">
+              <label class="govuk-label govuk-radios__label" for="option2">
+                To prove my right to rent in England
+              </label>
+              <div id="option-hint" class="govuk-hint govuk-radios__hint">
+                To a private landlord or letting agent
+              </div>
+            </div>
+
+
+
+            </div>
+            <div style="width: 44px;">
+              <p>or</p>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option3" name="reason" type="radio" value="prove" aria-describedby="option3">
+              <label class="govuk-label govuk-radios__label" for="option3">
+                To prove my immigration status for anything else
+              </label>
+
+              <div id="option-hint" class="govuk-hint govuk-radios__hint">
+                For example studying, council housing, or to get a driving licence
+              </div>
+
+
+
+            </div>
+          </div>
+
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+
+            <button class="govuk-button">Continue</button>
+          </form>
+
+
+
+  </div>
+
+</div>
+
+
+
+<div>
+
+
+</div>
+
+
+
+
+{% endblock %}

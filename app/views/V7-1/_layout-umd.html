@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% include "includes/header.html" %}
+
+{% endblock %}
+
+{% block footer %}
+
+  {{ govukFooter({
+    meta: {
+      items: [
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        },
+        {
+          href: "/docs/cookies",
+          text: "Cookies"
+        },
+        {
+          href: "/docs/privacy-policy",
+          text: "Privacy policy"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

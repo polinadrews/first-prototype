@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+{% set serviceName="" %}
+
+{% block pageTitle %}
+Research 7.1 screen index
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/backlink.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      3C leave and sharing status
+    </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">Scenarios: 3C leave content, proving status and NINO not available content</p>
+
+      <p class="govuk-body">We want to know if users understand:</p>
+        <ol class="govuk-list govuk-list--number govuk-!-padding-bottom-7">
+          <li>what 3C leave is and what it contains</li>
+          <li>how to share their status from within the account and getting back to the account</li>
+          <li>if their NINO is not available</li>
+        </ol>
+
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Research setup</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="research-setup">Set up</a>
+        <td class="govuk-table__cell"><p>Personalisation of the user journey for research</p>
+        <p>Scenario 1: no expiry date
+        <br>
+        Scenario 2: expiry date shown</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">VP start page (gov.uk)</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="gov-uk/start-vp">View and prove your immigration status</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <br>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Account - application submitted</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account/home">Account home</a>
+        <td class="govuk-table__cell"><p>Changes: dynamic text showing expiry date based on scenario selection</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account/evisa">eVisa</a>
+        <td class="govuk-table__cell"><p>Changes - eVisa instead of status, bullet point re. travel documents</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account/applications">Applications</a>
+        <td class="govuk-table__cell"><p>Changes since last iteration - Content to do with status, deleting app, UAN, version with 2 applications</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="account/personal-information">Manage account</a>
+        <td class="govuk-table__cell"><p>No changes since last iteration</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+  <!-- Status pages -->
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Status share code pages</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/vp/vp-share-code-info">V&P Share code info</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/share-options">Reasons to share</a>
+        <td class="govuk-table__cell"><p>Production copy - routing users to relevant service depending on their selection</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/rtw/rtw-checker-preview">RTW checker preview</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/rtw/create-share-code">RTW create share code</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/rtw/add-checker-email">RTW add checker email</a>
+        <td class="govuk-table__cell"><p>Production copy - sharing share code with employer</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/vp/vp-checker-preview">V&P checker preview</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/vp/create-share-code">V&P create share code</a>
+        <td class="govuk-table__cell"><p>Production copy</p>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="status/vp/add-checker-email">V&P add checker email</a>
+        <td class="govuk-table__cell"><p>Production copy - sharing share code with employer</p>
+        </td>
+      </tr>
+      </tbody>
+  </table>
+
+
+  </div>
+</div>
+
+      {% endblock %}
